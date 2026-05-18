@@ -3,8 +3,7 @@ import { useState } from "react";
 
 const NAV = [
   { label: "회사소개", href: "#about" },
-  { label: "사업분야", href: "#services-section" },
-  { label: "시험 프로세스", href: "#process" },
+  { label: "사업분야", href: "#services" },
   { label: "문의", href: "#contact" },
 ];
 
