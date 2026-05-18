@@ -13,6 +13,7 @@ const NAV = [
       { label: "기술시험 (FCA·ADAS)", href: "/services/technical" },
       { label: "기술교육", href: "/services/training" },
       { label: "자기인증", href: "/services/certification" },
+      { label: "시험지원", href: "/services/test-support" },
     ],
   },
   { label: "보유장비", href: "/equipment" },
