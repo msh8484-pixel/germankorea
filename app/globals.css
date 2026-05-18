@@ -1,0 +1,64 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
+:root {
+  --bg: rgba(8,18,30,0.38);
+  --bg-2: rgba(13,27,42,0.44);
+  --bg-3: rgba(18,34,54,0.50);
+  --text: #ffffff;
+  --text-muted: #c8d8e8;
+  --text-dim: #7a98b4;
+  --accent: #CC0022;
+  --border: rgba(255,255,255,0.08);
+  --font: 'Pretendard', 'Inter', -apple-system, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  background: #08121E;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  position: relative;
+}
+section { background: var(--bg); position: relative; z-index: 1; }
+.hero-section { background: none !important; }
+.gk-grid-bg {
+  background-image:
+    linear-gradient(rgba(204,0,34,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(204,0,34,0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: var(--font); }
+img { display: block; max-width: 100%; }
+h1, h2, h3, h4 { word-break: keep-all; }
+
+/* 그레인 오버레이 */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+/* 마퀴 */
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 28s linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }
+
+/* 히어로 텍스트 라인 클립 */
+.hero-line-wrap { overflow: hidden; }
+.hero-line { display: block; }
