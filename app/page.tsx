@@ -15,7 +15,7 @@ const SERVICES = [
     en: "Domestic Vehicle Testing",
     desc: "개발차량 또는 품질확인 차량 내구신뢰성 시험 / 각종 시스템 시험 / 친환경자동차 시험 등의 실차시험 제공",
     items: ["필드 내구시험", "필드 모니터링", "PEMS 시험", "친환경자동차시험", "제동시험", "조향시험", "연비성능시험"],
-    video: "eXSbJix2N74",
+    video: "zRWq7hstgL4",
     side: "left",
   },
   {
@@ -24,7 +24,7 @@ const SERVICES = [
     en: "Overseas Vehicle Testing",
     desc: "중국 현지 시험인프라를 이용한 혹한지·혹서지·고지시험 / 중국 현지 성능 및 내구시험 등의 실차시험 제공",
     items: ["혹한지시험", "혹서지시험", "고지시험", "성능 및 내구시험 (중국)"],
-    video: "OVY-dxhyle0",
+    video: "fe887fACTL8",
     side: "right",
   },
   {
@@ -33,7 +33,7 @@ const SERVICES = [
     en: "Technical Testing",
     desc: "신기술(FCA·ADAS·자율주행) 시험 / 실주행 Data Base 취득 및 모니터링 / 차량 상품성 평가 등 기술시험 제공",
     items: ["FCA시험", "실주행 D/B 및 Monitoring", "System 특성시험", "상품성평가", "군집주행"],
-    video: "cqJtuPgMk4w",
+    video: "xUtQ8hKQeFo",
     side: "left",
   },
   {
