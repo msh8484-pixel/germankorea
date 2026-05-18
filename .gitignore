@@ -43,6 +43,7 @@ next-env.d.ts
 # large/binary files
 *.zip
 *.ai
+*.mp4
+*.mov
 agent-input/
 tg-receive.mjs
-public/images/현장사진/
