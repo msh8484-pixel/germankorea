@@ -82,18 +82,26 @@ const MARQUEE_ITEMS = [
   "Euro NCAP", "·", "C-NCAP", "·", "독일 기반 네트워크", "·",
 ];
 
+/* ──────────────────────────────────────────────
+   영상 ID
+   히어로 bg : Euro NCAP BMW 5 Series 2023
+   AEB 쇼케이스: Euro NCAP Hyundai KONA 2023
+   혹한지 쇼케이스: Arjeplog 스웨덴 겨울 주행시험
+────────────────────────────────────────────── */
+const HERO_VIDEO = "1KO2v_hcM9g";
+
 const VIDEO_SHOWCASE = [
   {
-    id: "hfZWT5FKjS0",
+    id: "G_S1rBckZN8",
     label: "AEB · FCA 시험",
     title: "자동비상제동 검증",
     sub: "Euro NCAP 기준 AEB 시험 현장",
   },
   {
-    id: "S5gl1S0GMkk",
+    id: "xFrMzrTZ8Uk",
     label: "극한 환경 시험",
     title: "혹한지 · 혹서지 시험",
-    sub: "극한 기후 조건 차량 성능 검증",
+    sub: "스웨덴 아르예플로그 극한 주행 검증",
   },
 ];
 
@@ -110,17 +118,17 @@ export default function Home() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(logoRef.current,
-      { opacity: 0, y: 56, filter: "blur(12px)" },
-      { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.1, ease: "power3.out" }
+      { opacity: 0, y: 48, filter: "blur(12px)" },
+      { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.9, ease: "power3.out" }
     )
-    .to(logoRef.current, { duration: 1.0 })
-    .to(logoRef.current, { opacity: 0, y: -36, duration: 0.55, ease: "power2.in" })
-    .to(introRef.current, { opacity: 0, duration: 0.35, ease: "power2.in" }, "-=0.25")
+    .to(logoRef.current, { duration: 0.6 })
+    .to(logoRef.current, { opacity: 0, y: -28, duration: 0.45, ease: "power2.in" })
+    .to(introRef.current, { opacity: 0, duration: 0.3, ease: "power2.in" }, "-=0.25")
     .add(() => {
       setIntroVisible(false);
       gsap.fromTo(siteRef.current,
         { opacity: 0 },
-        { opacity: 1, duration: 0.65, ease: "power2.out" }
+        { opacity: 1, duration: 0.55, ease: "power2.out" }
       );
     });
   }, []);
@@ -132,16 +140,16 @@ export default function Home() {
     const ctx = gsap.context(() => {
       /* 히어로 텍스트 */
       gsap.fromTo(".hero-line",
-        { y: 72, opacity: 0, filter: "blur(14px)" },
+        { y: 64, opacity: 0, filter: "blur(14px)" },
         { y: 0, opacity: 1, filter: "blur(0px)", duration: 1.0, stagger: 0.14, ease: "power3.out", delay: 0.1 }
       );
       gsap.fromTo(".hero-sub",
         { opacity: 0, y: 20, filter: "blur(8px)" },
-        { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.8, ease: "power2.out", delay: 0.6 }
+        { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.8, ease: "power2.out", delay: 0.55 }
       );
       gsap.fromTo(".hero-buttons",
         { opacity: 0, y: 16, filter: "blur(6px)" },
-        { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.7, ease: "power2.out", delay: 0.85 }
+        { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.7, ease: "power2.out", delay: 0.8 }
       );
 
       /* 수평 스크롤 — 서비스 패널 */
@@ -229,43 +237,51 @@ export default function Home() {
       <div ref={siteRef} style={{ opacity: 0 }}>
         <Navbar />
 
-        {/* ── HERO (dark) ── */}
+        {/* ── HERO (dark + 영상 배경) ── */}
         <section style={{
           minHeight: "100dvh",
           display: "flex", flexDirection: "column", justifyContent: "flex-end",
           padding: "0 80px 100px",
           position: "relative", overflow: "hidden",
-          background: "#0A1628",
+          background: "#060e1a",
         }}>
-          <div className="gk-grid-bg" style={{ position: "absolute", inset: 0, zIndex: 0 }} />
+          {/* 배경 영상 */}
+          <div style={{ position: "absolute", inset: 0, zIndex: 0, overflow: "hidden" }}>
+            <iframe
+              src={`https://www.youtube.com/embed/${HERO_VIDEO}?autoplay=1&mute=1&loop=1&playlist=${HERO_VIDEO}&controls=0&disablekb=1&modestbranding=1&playsinline=1&rel=0&showinfo=0&start=18`}
+              allow="autoplay; encrypted-media"
+              style={{
+                position: "absolute", top: "50%", left: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "177.78vh", minWidth: "100%",
+                height: "56.25vw", minHeight: "100%",
+                border: "none", pointerEvents: "none",
+              }}
+            />
+          </div>
+          {/* 좌측 어둠 그라디언트 */}
           <div style={{
             position: "absolute", inset: 0, zIndex: 1,
-            background: "linear-gradient(to right, rgba(10,22,40,0.96) 0%, rgba(10,22,40,0.6) 50%, rgba(10,22,40,0.18) 100%)",
+            background: "linear-gradient(to right, rgba(6,14,26,0.92) 0%, rgba(6,14,26,0.62) 50%, rgba(6,14,26,0.22) 100%)",
           }} />
+          {/* 하단 어둠 그라디언트 */}
           <div style={{
             position: "absolute", inset: 0, zIndex: 1,
-            background: "linear-gradient(to top, #0A1628 0%, transparent 42%)",
+            background: "linear-gradient(to top, #060e1a 0%, transparent 45%)",
           }} />
           {/* 링 장식 */}
           <div style={{
             position: "absolute", right: "7%", top: "50%", transform: "translateY(-50%)",
             width: 440, height: 440, borderRadius: "50%",
-            border: "1px solid rgba(204,0,34,0.1)",
-            zIndex: 1,
+            border: "1px solid rgba(204,0,34,0.12)",
+            zIndex: 2,
           }}>
-            <div style={{ position: "absolute", inset: 55, borderRadius: "50%", border: "1px solid rgba(204,0,34,0.07)" }}>
+            <div style={{ position: "absolute", inset: 55, borderRadius: "50%", border: "1px solid rgba(204,0,34,0.08)" }}>
               <div style={{ position: "absolute", inset: 55, borderRadius: "50%", border: "1px solid rgba(204,0,34,0.05)" }} />
             </div>
           </div>
-          {/* 빨간 빛 */}
-          <div style={{
-            position: "absolute", top: "28%", left: "18%",
-            width: "55vw", height: "55vw", borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(204,0,34,0.07) 0%, transparent 62%)",
-            pointerEvents: "none", zIndex: 1,
-          }} />
 
-          <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%", position: "relative", zIndex: 2 }}>
+          <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%", position: "relative", zIndex: 3 }}>
             <div style={{ marginBottom: 32 }}>
               <p className="hero-line" style={{
                 fontSize: 12, fontWeight: 700, letterSpacing: "0.35em", color: "var(--accent)",
@@ -295,7 +311,7 @@ export default function Home() {
               </div>
             </div>
             <p className="hero-sub" style={{
-              fontSize: 18, color: "rgba(200,218,240,0.75)", lineHeight: 2.0,
+              fontSize: 18, color: "rgba(210,228,248,0.80)", lineHeight: 2.0,
               maxWidth: 500, marginBottom: 56, opacity: 0,
             }}>
               국내·해외 실차시험 · FCA/ADAS 기술시험<br />기술교육 · 자기인증 — 5개 분야 원스톱
@@ -310,10 +326,10 @@ export default function Home() {
 
           {/* SCROLL 인디케이터 */}
           <div style={{
-            position: "absolute", bottom: 40, right: 48, zIndex: 2,
+            position: "absolute", bottom: 40, right: 48, zIndex: 3,
             display: "flex", flexDirection: "column", alignItems: "center", gap: 8,
           }}>
-            <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: "0.2em", color: "rgba(255,255,255,0.25)", writingMode: "vertical-rl" }}>SCROLL</span>
+            <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: "0.2em", color: "rgba(255,255,255,0.3)", writingMode: "vertical-rl" }}>SCROLL</span>
             <div style={{ width: 1, height: 56, background: "linear-gradient(to bottom, var(--accent), transparent)", opacity: 0.55 }} />
           </div>
         </section>
@@ -337,6 +353,43 @@ export default function Home() {
             ))}
           </div>
         </div>
+
+        {/* ── 영상 쇼케이스 1 — AEB (마퀴 바로 뒤) ── */}
+        <section className="video-section" style={{
+          position: "relative", width: "100%", height: "80vh", minHeight: 480,
+          background: "#030609", overflow: "hidden",
+        }}>
+          <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+            <iframe
+              src={`https://www.youtube.com/embed/${VIDEO_SHOWCASE[0].id}?autoplay=1&mute=1&loop=1&playlist=${VIDEO_SHOWCASE[0].id}&controls=0&disablekb=1&modestbranding=1&playsinline=1&rel=0&showinfo=0`}
+              allow="autoplay; encrypted-media"
+              style={{
+                position: "absolute", top: "50%", left: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "177.78vh", minWidth: "100%",
+                height: "56.25vw", minHeight: "100%",
+                border: "none", pointerEvents: "none",
+              }}
+            />
+          </div>
+          <div style={{
+            position: "absolute", inset: 0, zIndex: 1,
+            background: "linear-gradient(to right, rgba(6,14,26,0.88) 0%, rgba(6,14,26,0.45) 55%, rgba(6,14,26,0.12) 100%)",
+          }} />
+          <div style={{ position: "absolute", inset: 0, zIndex: 2, display: "flex", alignItems: "center", padding: "0 80px" }}>
+            <div className="video-label" style={{ maxWidth: 1200, margin: "0 auto", width: "100%" }}>
+              <p style={{ fontSize: 12, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.35em", marginBottom: 22 }}>
+                {VIDEO_SHOWCASE[0].label}
+              </p>
+              <h3 style={{ fontSize: "clamp(32px, 5vw, 68px)", fontWeight: 900, color: "#fff", letterSpacing: "-0.03em", marginBottom: 18 }}>
+                {VIDEO_SHOWCASE[0].title}
+              </h3>
+              <p style={{ fontSize: 16, color: "rgba(255,255,255,0.5)", letterSpacing: "0.04em" }}>
+                {VIDEO_SHOWCASE[0].sub}
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* ── HORIZONTAL SCROLL — 사업분야 (light panels) ── */}
         <div id="services-section" ref={hContainerRef} style={{ position: "relative" }}>
@@ -426,43 +479,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-
-        {/* ── 영상 쇼케이스 1 ── */}
-        <section className="video-section" style={{
-          position: "relative", width: "100%", height: "80vh", minHeight: 480,
-          background: "#030609", overflow: "hidden",
-        }}>
-          <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
-            <iframe
-              src={`https://www.youtube.com/embed/${VIDEO_SHOWCASE[0].id}?autoplay=1&mute=1&loop=1&playlist=${VIDEO_SHOWCASE[0].id}&controls=0&disablekb=1&modestbranding=1&playsinline=1&rel=0&showinfo=0`}
-              allow="autoplay; encrypted-media"
-              style={{
-                position: "absolute", top: "50%", left: "50%",
-                transform: "translate(-50%, -50%)",
-                width: "177.78vh", minWidth: "100%",
-                height: "56.25vw", minHeight: "100%",
-                border: "none", pointerEvents: "none",
-              }}
-            />
-          </div>
-          <div style={{
-            position: "absolute", inset: 0, zIndex: 1,
-            background: "linear-gradient(to right, rgba(10,22,40,0.88) 0%, rgba(10,22,40,0.45) 55%, rgba(10,22,40,0.15) 100%)",
-          }} />
-          <div style={{ position: "absolute", inset: 0, zIndex: 2, display: "flex", alignItems: "center", padding: "0 80px" }}>
-            <div className="video-label" style={{ maxWidth: 1200, margin: "0 auto", width: "100%" }}>
-              <p style={{ fontSize: 12, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.35em", marginBottom: 22 }}>
-                {VIDEO_SHOWCASE[0].label}
-              </p>
-              <h3 style={{ fontSize: "clamp(32px, 5vw, 68px)", fontWeight: 900, color: "#fff", letterSpacing: "-0.03em", marginBottom: 18 }}>
-                {VIDEO_SHOWCASE[0].title}
-              </h3>
-              <p style={{ fontSize: 15, color: "rgba(255,255,255,0.45)", letterSpacing: "0.04em" }}>
-                {VIDEO_SHOWCASE[0].sub}
-              </p>
-            </div>
-          </div>
-        </section>
 
         {/* ── ABOUT (light) ── */}
         <section id="about" style={{ padding: "128px 80px", background: "#FFFFFF" }}>
@@ -582,7 +598,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── 영상 쇼케이스 2 ── */}
+        {/* ── 영상 쇼케이스 2 — 혹한지 (스웨덴 아르예플로그) ── */}
         <section className="video-section" style={{
           position: "relative", width: "100%", height: "70vh", minHeight: 420,
           background: "#030609", overflow: "hidden",
@@ -602,7 +618,7 @@ export default function Home() {
           </div>
           <div style={{
             position: "absolute", inset: 0, zIndex: 1,
-            background: "linear-gradient(to left, rgba(10,22,40,0.88) 0%, rgba(10,22,40,0.45) 55%, rgba(10,22,40,0.15) 100%)",
+            background: "linear-gradient(to left, rgba(6,14,26,0.88) 0%, rgba(6,14,26,0.45) 55%, rgba(6,14,26,0.12) 100%)",
           }} />
           <div style={{ position: "absolute", inset: 0, zIndex: 2, display: "flex", alignItems: "center", justifyContent: "flex-end", padding: "0 80px" }}>
             <div className="video-label" style={{ textAlign: "right", maxWidth: 560 }}>
@@ -612,7 +628,7 @@ export default function Home() {
               <h3 style={{ fontSize: "clamp(28px, 4.5vw, 64px)", fontWeight: 900, color: "#fff", letterSpacing: "-0.03em", marginBottom: 18 }}>
                 {VIDEO_SHOWCASE[1].title}
               </h3>
-              <p style={{ fontSize: 15, color: "rgba(255,255,255,0.45)", letterSpacing: "0.04em" }}>
+              <p style={{ fontSize: 16, color: "rgba(255,255,255,0.5)", letterSpacing: "0.04em" }}>
                 {VIDEO_SHOWCASE[1].sub}
               </p>
             </div>
@@ -718,7 +734,7 @@ export default function Home() {
 
         /* 서비스 패널 링크 */
         .gk-panel-link {
-          display: inline-flex; align-items: center; gap: 10;
+          display: inline-flex; align-items: center; gap: 10px;
           margin-top: 44px; font-size: 13px; font-weight: 700;
           color: var(--accent); letter-spacing: 0.1em;
           border-bottom: 1px solid rgba(204,0,34,0.3); padding-bottom: 4px;
@@ -727,12 +743,11 @@ export default function Home() {
         .gk-panel-link:hover { gap: 16px; border-color: var(--accent); }
 
         @media (max-width: 768px) {
-          .hero-section { padding: 80px 20px 64px !important; }
           .hero-buttons { flex-direction: column !important; }
           .hero-buttons a { width: 100% !important; text-align: center !important; }
 
-          #about { padding: 72px 20px !important; }
-          #about > div > div { grid-template-columns: 1fr !important; gap: 48px !important; }
+          section[id="about"] { padding: 72px 20px !important; }
+          section[id="about"] > div > div { grid-template-columns: 1fr !important; gap: 48px !important; }
 
           .strengths-bento { grid-template-columns: 1fr !important; }
           .strength-card { padding: 40px 28px !important; }
@@ -741,16 +756,18 @@ export default function Home() {
           .strength-card-wide > div:last-child { display: none !important; }
 
           .video-section { height: 56vw !important; min-height: 240px !important; }
-          .video-section iframe { width: 100% !important; height: 100% !important; transform: none !important; top: 0 !important; left: 0 !important; }
+          .video-section > div:first-child iframe { width: 100% !important; height: 100% !important; transform: none !important; top: 0 !important; left: 0 !important; }
 
-          #process { padding: 72px 20px !important; }
+          section[id="process"] { padding: 72px 20px !important; }
           .process-grid { grid-template-columns: repeat(2, 1fr) !important; }
           .proc-step { border-right: none !important; padding: 32px 16px !important; }
           .proc-step:nth-child(odd) { border-right: 1px solid rgba(10,22,40,0.07) !important; }
 
-          #contact { padding: 88px 20px !important; }
+          section[id="contact"] { padding: 88px 20px !important; }
           .cta-buttons { flex-direction: column !important; align-items: stretch !important; }
           .cta-buttons a { text-align: center !important; padding: 18px 24px !important; }
+
+          .video-section > div:last-child { padding: 0 20px !important; }
         }
       `}</style>
     </>
