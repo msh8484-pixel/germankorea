@@ -13,53 +13,60 @@ const SERVICES = [
     num: "01",
     ko: "국내 실차시험",
     en: "Domestic Vehicle Testing",
-    sub: "NVH · 내구성 · 주행성능 · 안전기능 · 연비",
-    desc: "국내 법규 및 완성차 메이커 요구사항에 따른 실차 종합 성능 시험. 국내 5대 완성차사 협력 기반의 현장 검증 서비스.",
-    accent: "#CC0022",
-    bg: "linear-gradient(135deg, #0a0d12 0%, #12060b 100%)",
+    sub: "신뢰성 · 내구성 · NVH · 안전기능 · 연비",
+    desc: "개발차량 및 품질보증차량의 신뢰성·내구성 시험, 시스템 시험, 친환경차량 평가. 국내 5대 완성차사와의 협력 기반 현장 검증 서비스를 제공합니다.",
+    bg: "#F8FAFD",
   },
   {
     num: "02",
     ko: "해외 실차시험",
     en: "Overseas Vehicle Testing",
-    sub: "독일 · 중국(연태) · 미국 거점 직접 대행",
-    desc: "유럽·북미·중국 현지 시험장을 활용한 해외 실차시험 대행. 혹한지·혹서지·고지 시험까지 원스톱 처리.",
-    accent: "#CC0022",
-    bg: "linear-gradient(135deg, #080d16 0%, #0b0f1c 100%)",
+    sub: "혹한지 · 혹서지 · 고지 · 중국(연태) 직접 대행",
+    desc: "혹한지·혹서지·고지 극한환경 시험 및 중국(연태) 현지 내구·성능시험 대행. 유럽·북미·중국 현지 시험장을 활용한 원스톱 처리.",
+    bg: "#F3F7FC",
   },
   {
     num: "03",
     ko: "기술시험",
     en: "Technical Testing",
-    sub: "FCA · AEB · ADAS · 자율주행 검증",
-    desc: "전방추돌경고·자동비상제동(FCA/AEB), ADAS 센서 퓨전, 자율주행 기술 시험·평가. Euro NCAP·C-NCAP 기준 첨단 안전기능 검증.",
-    accent: "#CC0022",
-    bg: "linear-gradient(135deg, #0c0810 0%, #0f0a08 100%)",
+    sub: "FCA · AEB · ADAS · 자율주행 실데이터 수집",
+    desc: "전방추돌경고·자동비상제동(FCA/AEB) 및 ADAS 센서 시험. 자율주행 실데이터 수집과 차량 품질평가. Euro NCAP·C-NCAP 기준 첨단 안전기능 검증.",
+    bg: "#F8FAFD",
   },
   {
     num: "04",
     ko: "기술교육",
     en: "Technical Training",
-    sub: "자동차 시험·평가 전문 실무 교육",
-    desc: "국내외 자동차 법규·시험 방법론 및 FCA·ADAS·자율주행 최신 기술 교육. 현장 전문가 직강 프로그램.",
-    accent: "#CC0022",
-    bg: "linear-gradient(135deg, #070d0a 0%, #090c10 100%)",
+    sub: "시험차 운용 · 품질평가 방법론 · 주행성능 시험",
+    desc: "시험차량 운용, 품질평가 방법론, 차량 주행성능 시험 전문 교육. 현장 전문가 직강 실무 프로그램으로 실전 역량을 키웁니다.",
+    bg: "#F3F7FC",
   },
   {
     num: "05",
     ko: "자기인증",
     en: "Self-Certification",
-    sub: "국토교통부 자동차 자기인증 전 과정 대행",
-    desc: "형식승인·안전기준 적합성 검증부터 인증 서류 작성·제출까지. 중소 부품사·스타트업도 쉽게 통과하는 원스톱 지원.",
-    accent: "#CC0022",
-    bg: "linear-gradient(135deg, #0a0c0d 0%, #0d0810 100%)",
+    sub: "인증 컨설팅 · 안전기준 시험 · 리콜 대응",
+    desc: "자동차 및 부품 자기인증 컨설팅, 안전기준 시험, 리콜 대응 지원. 형식승인부터 서류 제출까지 원스톱으로 처리합니다.",
+    bg: "#F8FAFD",
   },
 ];
 
 const STRENGTHS = [
-  { n: "01", title: "독일 기반 글로벌 네트워크", desc: "독일 현지 시험기관·완성차 메이커와의 직접 협력. 유럽 시험 기준을 가장 빠르게 국내에 도입합니다." },
-  { n: "02", title: "FCA · ADAS 전문성", desc: "전방추돌경고·자동비상제동 시험에 특화. Euro NCAP 기준 적용 가능한 국내 민간 전문기관." },
-  { n: "03", title: "원스톱 인증 지원", desc: "시험 계획부터 실차 평가, 자기인증 서류까지 전 과정 한 팀이 책임집니다." },
+  {
+    n: "01",
+    title: "독일 기반 글로벌 네트워크",
+    desc: "독일 현지 시험기관·완성차 메이커와의 직접 협력. 유럽 시험 기준을 가장 빠르게 국내에 도입합니다.",
+  },
+  {
+    n: "02",
+    title: "FCA · ADAS 전문성",
+    desc: "전방추돌경고·자동비상제동 시험에 특화. Euro NCAP 기준 적용 가능한 국내 민간 전문기관.",
+  },
+  {
+    n: "03",
+    title: "원스톱 인증 지원",
+    desc: "시험 계획부터 실차 평가, 자기인증 서류까지 전 과정 한 팀이 책임집니다.",
+  },
 ];
 
 const PROCESS = [
@@ -69,8 +76,6 @@ const PROCESS = [
   { step: "04", title: "결과 보고", desc: "분석 리포트, 인증 대응 권고안 및 후속 지원" },
 ];
 
-// 영상 쇼케이스에 삽입할 YouTube 영상 ID
-// 실제 시험 영상으로 교체하세요
 const MARQUEE_ITEMS = [
   "국내 실차시험", "·", "해외 실차시험", "·", "FCA · AEB · ADAS", "·",
   "자율주행 검증", "·", "기술교육", "·", "자기인증", "·",
@@ -79,70 +84,72 @@ const MARQUEE_ITEMS = [
 
 const VIDEO_SHOWCASE = [
   {
-    id: "rU3mEBSRiUU",          // 교체 필요: 저먼코리아 실제 시험 영상
-    label: "FIELD RECORD",
-    title: "실차 시험 현장",
-    sub: "직접 촬영한 시험 영상으로 교체하세요",
+    id: "hfZWT5FKjS0",
+    label: "AEB · FCA 시험",
+    title: "자동비상제동 검증",
+    sub: "Euro NCAP 기준 AEB 시험 현장",
   },
   {
-    id: "jfKfPfyJRdk",          // 교체 필요: FCA/ADAS 기술시험 영상
-    label: "TECHNICAL TESTING",
-    title: "FCA · ADAS 기술시험",
-    sub: "첨단 안전기술 검증 영상으로 교체하세요",
+    id: "S5gl1S0GMkk",
+    label: "극한 환경 시험",
+    title: "혹한지 · 혹서지 시험",
+    sub: "극한 기후 조건 차량 성능 검증",
   },
 ];
 
 export default function Home() {
-  const introRef = useRef<HTMLDivElement>(null);
-  const logoRef = useRef<HTMLDivElement>(null);
-  const siteRef = useRef<HTMLDivElement>(null);
-  const hTrackRef = useRef<HTMLDivElement>(null);
+  const introRef      = useRef<HTMLDivElement>(null);
+  const logoRef       = useRef<HTMLDivElement>(null);
+  const siteRef       = useRef<HTMLDivElement>(null);
+  const hTrackRef     = useRef<HTMLDivElement>(null);
   const hContainerRef = useRef<HTMLDivElement>(null);
   const [introVisible, setIntroVisible] = useState(true);
-  const [activePanel, setActivePanel] = useState(0);
+  const [activePanel, setActivePanel]   = useState(0);
 
-  // 인트로 애니메이션
+  /* ── 인트로 애니메이션 ── */
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(logoRef.current,
-      { opacity: 0, y: 60 },
-      { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
+      { opacity: 0, y: 56, filter: "blur(12px)" },
+      { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.1, ease: "power3.out" }
     )
     .to(logoRef.current, { duration: 1.0 })
-    .to(logoRef.current, { opacity: 0, y: -40, duration: 0.6, ease: "power2.in" })
-    .to(introRef.current, { opacity: 0, duration: 0.4, ease: "power2.in" }, "-=0.3")
+    .to(logoRef.current, { opacity: 0, y: -36, duration: 0.55, ease: "power2.in" })
+    .to(introRef.current, { opacity: 0, duration: 0.35, ease: "power2.in" }, "-=0.25")
     .add(() => {
       setIntroVisible(false);
       gsap.fromTo(siteRef.current,
         { opacity: 0 },
-        { opacity: 1, duration: 0.7, ease: "power2.out" }
+        { opacity: 1, duration: 0.65, ease: "power2.out" }
       );
     });
   }, []);
 
-  // 메인 GSAP 애니메이션
+  /* ── 메인 GSAP ── */
   useEffect(() => {
     if (introVisible) return;
 
     const ctx = gsap.context(() => {
-      // 히어로 텍스트 등장 (blur + translate)
-      gsap.fromTo(".hero-line", { y: 72, opacity: 0, filter: "blur(14px)" }, {
-        y: 0, opacity: 1, filter: "blur(0px)", duration: 1.0, stagger: 0.14, ease: "power3.out", delay: 0.1,
-      });
-      gsap.fromTo(".hero-sub", { opacity: 0, y: 20, filter: "blur(8px)" }, {
-        opacity: 1, y: 0, filter: "blur(0px)", duration: 0.8, ease: "power2.out", delay: 0.6,
-      });
-      gsap.fromTo(".hero-buttons", { opacity: 0, y: 16, filter: "blur(6px)" }, {
-        opacity: 1, y: 0, filter: "blur(0px)", duration: 0.7, ease: "power2.out", delay: 0.85,
-      });
+      /* 히어로 텍스트 */
+      gsap.fromTo(".hero-line",
+        { y: 72, opacity: 0, filter: "blur(14px)" },
+        { y: 0, opacity: 1, filter: "blur(0px)", duration: 1.0, stagger: 0.14, ease: "power3.out", delay: 0.1 }
+      );
+      gsap.fromTo(".hero-sub",
+        { opacity: 0, y: 20, filter: "blur(8px)" },
+        { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.8, ease: "power2.out", delay: 0.6 }
+      );
+      gsap.fromTo(".hero-buttons",
+        { opacity: 0, y: 16, filter: "blur(6px)" },
+        { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.7, ease: "power2.out", delay: 0.85 }
+      );
 
-      // 수평 스크롤 — 서비스 패널
-      const track = hTrackRef.current;
+      /* 수평 스크롤 — 서비스 패널 */
+      const track     = hTrackRef.current;
       const container = hContainerRef.current;
       if (track && container) {
         const totalMove = (SERVICES.length - 1) * window.innerWidth;
-
-        const hST = gsap.to(track, {
+        gsap.to(track, {
           x: -totalMove,
           ease: "none",
           scrollTrigger: {
@@ -155,63 +162,66 @@ export default function Home() {
             anticipatePin: 1,
             invalidateOnRefresh: true,
             onUpdate: (self) => {
-              const idx = Math.round(self.progress * (SERVICES.length - 1));
-              setActivePanel(idx);
+              setActivePanel(Math.round(self.progress * (SERVICES.length - 1)));
             },
           },
         });
-        void hST;
       }
 
-      // 스크롤 트리거 reveal (blur + translate)
+      /* 스크롤 reveal */
       gsap.utils.toArray<HTMLElement>(".reveal").forEach((el) => {
-        gsap.fromTo(el, { opacity: 0, y: 32, filter: "blur(8px)" }, {
-          opacity: 1, y: 0, filter: "blur(0px)", duration: 0.85, ease: "power3.out",
-          scrollTrigger: { trigger: el, start: "top 83%", once: true },
-        });
+        gsap.fromTo(el,
+          { opacity: 0, y: 32, filter: "blur(8px)" },
+          { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.85, ease: "power3.out",
+            scrollTrigger: { trigger: el, start: "top 83%", once: true } }
+        );
       });
 
-      // 강점 카드
-      gsap.fromTo(".strength-card", { opacity: 0, y: 28 }, {
-        opacity: 1, y: 0, duration: 0.6, stagger: 0.12, ease: "power2.out",
-        scrollTrigger: { trigger: ".strengths-bento", start: "top 75%", once: true },
-      });
+      /* 강점 카드 */
+      gsap.fromTo(".strength-card",
+        { opacity: 0, y: 28 },
+        { opacity: 1, y: 0, duration: 0.6, stagger: 0.12, ease: "power2.out",
+          scrollTrigger: { trigger: ".strengths-bento", start: "top 75%", once: true } }
+      );
 
-      // 프로세스 스텝
-      gsap.fromTo(".proc-step", { opacity: 0, x: -24 }, {
-        opacity: 1, x: 0, duration: 0.6, stagger: 0.15, ease: "power2.out",
-        scrollTrigger: { trigger: ".process-grid", start: "top 75%", once: true },
-      });
+      /* 프로세스 스텝 */
+      gsap.fromTo(".proc-step",
+        { opacity: 0, x: -24 },
+        { opacity: 1, x: 0, duration: 0.6, stagger: 0.15, ease: "power2.out",
+          scrollTrigger: { trigger: ".process-grid", start: "top 75%", once: true } }
+      );
 
-      // 비디오 섹션 오버레이 텍스트
+      /* 비디오 오버레이 텍스트 */
       gsap.utils.toArray<HTMLElement>(".video-label").forEach((el) => {
-        gsap.fromTo(el, { opacity: 0, y: 32 }, {
-          opacity: 1, y: 0, duration: 0.9, ease: "power3.out",
-          scrollTrigger: { trigger: el.closest(".video-section"), start: "top 70%", once: true },
-        });
+        gsap.fromTo(el,
+          { opacity: 0, y: 32 },
+          { opacity: 1, y: 0, duration: 0.9, ease: "power3.out",
+            scrollTrigger: { trigger: el.closest(".video-section"), start: "top 70%", once: true } }
+        );
       });
     });
 
     return () => ctx.revert();
   }, [introVisible]);
 
+  /* ── JSX ── */
   return (
     <>
       {/* 인트로 */}
       {introVisible && (
         <div ref={introRef} style={{
-          position: "fixed", inset: 0, zIndex: 100, background: "#08121E",
+          position: "fixed", inset: 0, zIndex: 100, background: "#0A1628",
           display: "flex", alignItems: "center", justifyContent: "center",
         }}>
           <div ref={logoRef} style={{ opacity: 0, textAlign: "center" }}>
-            <p style={{ fontSize: 11, letterSpacing: "0.45em", color: "var(--accent)", fontWeight: 700, marginBottom: 20 }}>
+            <p style={{ fontSize: 12, letterSpacing: "0.45em", color: "var(--accent)", fontWeight: 700, marginBottom: 22 }}>
               AUTOMOTIVE TESTING &amp; EVALUATION
             </p>
-            <h1 style={{ fontSize: "clamp(36px, 7vw, 84px)", fontWeight: 900, color: "#fff", letterSpacing: "-0.02em", lineHeight: 1 }}>
+            <h1 style={{ fontSize: "clamp(38px, 7vw, 88px)", fontWeight: 900, color: "#fff", letterSpacing: "-0.02em", lineHeight: 1 }}>
               GERMAN<span style={{ color: "var(--accent)" }}>KOREA</span>
             </h1>
-            <div style={{ width: "100%", height: 1, background: "linear-gradient(90deg, transparent, var(--accent), transparent)", marginTop: 20, opacity: 0.5 }} />
-            <p style={{ marginTop: 16, fontSize: 12, color: "var(--text-muted)", letterSpacing: "0.14em" }}>저먼코리아(주)</p>
+            <div style={{ width: "100%", height: 1, background: "linear-gradient(90deg, transparent, var(--accent), transparent)", marginTop: 22, opacity: 0.45 }} />
+            <p style={{ marginTop: 16, fontSize: 13, color: "rgba(200,218,240,0.5)", letterSpacing: "0.14em" }}>저먼코리아(주)</p>
           </div>
         </div>
       )}
@@ -219,78 +229,81 @@ export default function Home() {
       <div ref={siteRef} style={{ opacity: 0 }}>
         <Navbar />
 
-        {/* ── HERO ── */}
-        <section className="hero-section" style={{
+        {/* ── HERO (dark) ── */}
+        <section style={{
           minHeight: "100dvh",
           display: "flex", flexDirection: "column", justifyContent: "flex-end",
           padding: "0 80px 100px",
           position: "relative", overflow: "hidden",
+          background: "#0A1628",
         }}>
-          {/* 기술 그리드 배경 */}
           <div className="gk-grid-bg" style={{ position: "absolute", inset: 0, zIndex: 0 }} />
-          {/* 좌측 그라디언트 */}
           <div style={{
             position: "absolute", inset: 0, zIndex: 1,
-            background: "linear-gradient(to right, rgba(8,18,30,0.95) 0%, rgba(8,18,30,0.6) 50%, rgba(8,18,30,0.2) 100%)",
+            background: "linear-gradient(to right, rgba(10,22,40,0.96) 0%, rgba(10,22,40,0.6) 50%, rgba(10,22,40,0.18) 100%)",
           }} />
-          {/* 밑에서 올라오는 그라디언트 */}
           <div style={{
             position: "absolute", inset: 0, zIndex: 1,
-            background: "linear-gradient(to top, #08121E 0%, transparent 40%)",
+            background: "linear-gradient(to top, #0A1628 0%, transparent 42%)",
           }} />
-          {/* 우측 링 장식 */}
+          {/* 링 장식 */}
           <div style={{
-            position: "absolute", right: "8%", top: "50%", transform: "translateY(-50%)",
-            width: 420, height: 420, borderRadius: "50%",
+            position: "absolute", right: "7%", top: "50%", transform: "translateY(-50%)",
+            width: 440, height: 440, borderRadius: "50%",
             border: "1px solid rgba(204,0,34,0.1)",
-            boxShadow: "inset 0 0 0 40px rgba(204,0,34,0.03), 0 0 0 80px rgba(204,0,34,0.02)",
             zIndex: 1,
           }}>
-            <div style={{ position: "absolute", inset: 50, borderRadius: "50%", border: "1px solid rgba(204,0,34,0.07)" }}>
-              <div style={{ position: "absolute", inset: 50, borderRadius: "50%", border: "1px solid rgba(204,0,34,0.05)" }} />
+            <div style={{ position: "absolute", inset: 55, borderRadius: "50%", border: "1px solid rgba(204,0,34,0.07)" }}>
+              <div style={{ position: "absolute", inset: 55, borderRadius: "50%", border: "1px solid rgba(204,0,34,0.05)" }} />
             </div>
           </div>
           {/* 빨간 빛 */}
           <div style={{
-            position: "absolute", top: "30%", left: "20%",
-            width: "50vw", height: "50vw", borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(204,0,34,0.06) 0%, transparent 65%)",
+            position: "absolute", top: "28%", left: "18%",
+            width: "55vw", height: "55vw", borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(204,0,34,0.07) 0%, transparent 62%)",
             pointerEvents: "none", zIndex: 1,
           }} />
 
           <div style={{ maxWidth: 1200, margin: "0 auto", width: "100%", position: "relative", zIndex: 2 }}>
-            {/* 태그라인 */}
-            <div style={{ marginBottom: 28 }}>
+            <div style={{ marginBottom: 32 }}>
               <p className="hero-line" style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: "0.35em", color: "var(--accent)",
+                fontSize: 12, fontWeight: 700, letterSpacing: "0.35em", color: "var(--accent)",
                 display: "flex", alignItems: "center", gap: 12,
               }}>
                 <span style={{ display: "inline-block", width: 32, height: 1, background: "var(--accent)" }} />
-                GERMAN KOREA — 저먼코리아(주)
+                GERMAN KOREA — 최상의 솔루션을 제공합니다
               </p>
             </div>
-            {/* 헤드라인 */}
-            <div style={{ marginBottom: 36 }}>
+            <div style={{ marginBottom: 40 }}>
               <div className="hero-line-wrap">
-                <h2 className="hero-line" style={{ fontSize: "clamp(40px, 7.5vw, 104px)", fontWeight: 900, lineHeight: 1.0, letterSpacing: "-0.04em", color: "#fff" }}>
+                <h2 className="hero-line" style={{
+                  fontSize: "clamp(48px, 8vw, 116px)", fontWeight: 900,
+                  lineHeight: 1.0, letterSpacing: "-0.04em", color: "#fff",
+                }}>
                   자동차 성능 시험,
                 </h2>
               </div>
               <div className="hero-line-wrap">
-                <h2 className="hero-line" style={{ fontSize: "clamp(40px, 7.5vw, 104px)", fontWeight: 900, lineHeight: 1.0, letterSpacing: "-0.04em" }}>
+                <h2 className="hero-line" style={{
+                  fontSize: "clamp(48px, 8vw, 116px)", fontWeight: 900,
+                  lineHeight: 1.0, letterSpacing: "-0.04em",
+                }}>
                   <span style={{ color: "var(--accent)" }}>독일 기준</span>
                   <span style={{ color: "#fff" }}>으로.</span>
                 </h2>
               </div>
             </div>
-            <p className="hero-sub" style={{ fontSize: 16, color: "var(--text-muted)", lineHeight: 1.9, maxWidth: 460, marginBottom: 52, opacity: 0 }}>
+            <p className="hero-sub" style={{
+              fontSize: 18, color: "rgba(200,218,240,0.75)", lineHeight: 2.0,
+              maxWidth: 500, marginBottom: 56, opacity: 0,
+            }}>
               국내·해외 실차시험 · FCA/ADAS 기술시험<br />기술교육 · 자기인증 — 5개 분야 원스톱
             </p>
             <div className="hero-buttons" style={{ display: "flex", gap: 16, flexWrap: "wrap", opacity: 0 }}>
               <a href="#contact" className="gk-cta-btn">시험 의뢰하기</a>
               <a href="#services-section" className="gk-outline-btn" style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                사업분야 보기
-                <span style={{ fontSize: 18 }}>↓</span>
+                사업분야 보기 <span style={{ fontSize: 16 }}>↓</span>
               </a>
             </div>
           </div>
@@ -300,17 +313,17 @@ export default function Home() {
             position: "absolute", bottom: 40, right: 48, zIndex: 2,
             display: "flex", flexDirection: "column", alignItems: "center", gap: 8,
           }}>
-            <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: "0.2em", color: "rgba(255,255,255,0.3)", writingMode: "vertical-rl" }}>SCROLL</span>
-            <div style={{ width: 1, height: 56, background: "linear-gradient(to bottom, var(--accent), transparent)", opacity: 0.6 }} />
+            <span style={{ fontSize: 9, fontWeight: 700, letterSpacing: "0.2em", color: "rgba(255,255,255,0.25)", writingMode: "vertical-rl" }}>SCROLL</span>
+            <div style={{ width: 1, height: 56, background: "linear-gradient(to bottom, var(--accent), transparent)", opacity: 0.55 }} />
           </div>
         </section>
 
         {/* ── MARQUEE STRIP ── */}
         <div style={{
           overflow: "hidden",
-          borderTop: "1px solid rgba(255,255,255,0.05)",
-          borderBottom: "1px solid rgba(255,255,255,0.05)",
-          background: "#050c15", padding: "13px 0", position: "relative", zIndex: 2,
+          borderTop: "1px solid rgba(10,22,40,0.07)",
+          borderBottom: "1px solid rgba(10,22,40,0.07)",
+          background: "#F3F7FC", padding: "14px 0",
         }}>
           <div className="marquee-track">
             {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, i) => (
@@ -318,14 +331,14 @@ export default function Home() {
                 padding: item === "·" ? "0 16px" : "0 28px",
                 fontSize: 10, fontWeight: item === "·" ? 400 : 700,
                 letterSpacing: "0.22em",
-                color: item === "·" ? "rgba(204,0,34,0.4)" : "rgba(255,255,255,0.3)",
+                color: item === "·" ? "rgba(204,0,34,0.45)" : "rgba(10,22,40,0.38)",
                 whiteSpace: "nowrap",
               }}>{item}</span>
             ))}
           </div>
         </div>
 
-        {/* ── HORIZONTAL SCROLL — 사업분야 ── */}
+        {/* ── HORIZONTAL SCROLL — 사업분야 (light panels) ── */}
         <div id="services-section" ref={hContainerRef} style={{ position: "relative" }}>
           <div ref={hTrackRef} style={{
             display: "flex",
@@ -334,81 +347,63 @@ export default function Home() {
             willChange: "transform",
           }}>
             {SERVICES.map((svc, i) => (
-              <div
-                key={svc.num}
-                style={{
-                  width: "100vw", height: "100dvh",
-                  flexShrink: 0,
-                  background: svc.bg,
-                  position: "relative", overflow: "hidden",
-                  display: "flex", flexDirection: "column", justifyContent: "flex-end",
-                  padding: "80px",
-                }}
-              >
-                {/* 배경 그리드 */}
-                <div className="gk-grid-bg" style={{ position: "absolute", inset: 0, opacity: 0.5 }} />
-                {/* 빛 */}
-                <div style={{
-                  position: "absolute", bottom: "-10%", left: "10%",
-                  width: "40vw", height: "40vw", borderRadius: "50%",
-                  background: `radial-gradient(circle, rgba(204,0,34,0.08) 0%, transparent 65%)`,
-                  pointerEvents: "none",
-                }} />
-                {/* 대형 번호 (배경) */}
-                <span style={{
-                  position: "absolute", top: "50%", right: "8%",
-                  transform: "translateY(-50%)",
-                  fontSize: "clamp(200px, 25vw, 340px)",
-                  fontWeight: 900, lineHeight: 1,
-                  color: "rgba(204,0,34,0.06)",
-                  letterSpacing: "-0.06em",
-                  userSelect: "none", pointerEvents: "none",
-                }}>{svc.num}</span>
-                {/* 우측 상단 — 서비스 카운터 */}
+              <div key={svc.num} style={{
+                width: "100vw", height: "100dvh",
+                flexShrink: 0,
+                background: svc.bg,
+                position: "relative", overflow: "hidden",
+                display: "flex", flexDirection: "column", justifyContent: "flex-end",
+                padding: "80px",
+                borderRight: i < SERVICES.length - 1 ? "1px solid rgba(10,22,40,0.06)" : "none",
+              }}>
+                <div className="gk-grid-light" style={{ position: "absolute", inset: 0, opacity: 0.8 }} />
+                {/* 상단 우측 — 카운터 */}
                 <div style={{
                   position: "absolute", top: 48, right: 80,
-                  fontSize: 11, color: "var(--text-dim)", letterSpacing: "0.15em",
+                  fontSize: 12, color: "rgba(10,22,40,0.3)", letterSpacing: "0.15em", fontWeight: 600,
                 }}>
                   {String(i + 1).padStart(2, "0")} / {String(SERVICES.length).padStart(2, "0")}
                 </div>
+                {/* 대형 배경 번호 */}
+                <span style={{
+                  position: "absolute", top: "50%", right: "6%",
+                  transform: "translateY(-50%)",
+                  fontSize: "clamp(200px, 25vw, 340px)",
+                  fontWeight: 900, lineHeight: 1,
+                  color: "rgba(0,45,114,0.04)",
+                  letterSpacing: "-0.06em",
+                  userSelect: "none", pointerEvents: "none",
+                }}>{svc.num}</span>
                 {/* 콘텐츠 */}
                 <div style={{ position: "relative", zIndex: 1, maxWidth: 720 }}>
-                  <p style={{ fontSize: 11, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.3em", marginBottom: 20 }}>
+                  <p style={{ fontSize: 12, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.3em", marginBottom: 22 }}>
                     {svc.en.toUpperCase()}
                   </p>
-                  <h2 style={{ fontSize: "clamp(44px, 6vw, 88px)", fontWeight: 900, letterSpacing: "-0.04em", color: "#fff", lineHeight: 1.05, marginBottom: 20 }}>
+                  <h2 style={{
+                    fontSize: "clamp(44px, 6vw, 88px)", fontWeight: 900,
+                    letterSpacing: "-0.04em", color: "#0A1628", lineHeight: 1.05, marginBottom: 22,
+                  }}>
                     {svc.ko}
                   </h2>
-                  <div style={{ width: 48, height: 2, background: "var(--accent)", marginBottom: 24, opacity: 0.8 }} />
-                  <p style={{ fontSize: 13, color: "rgba(204,0,34,0.85)", fontWeight: 600, letterSpacing: "0.06em", marginBottom: 20 }}>
+                  <div style={{ width: 48, height: 3, background: "var(--accent)", marginBottom: 26, opacity: 0.85 }} />
+                  <p style={{ fontSize: 15, color: "var(--accent)", fontWeight: 600, letterSpacing: "0.05em", marginBottom: 20 }}>
                     {svc.sub}
                   </p>
-                  <p style={{ fontSize: 16, color: "var(--text-muted)", lineHeight: 1.9, maxWidth: 520 }}>
+                  <p style={{ fontSize: 18, color: "#3d5570", lineHeight: 1.95, maxWidth: 520 }}>
                     {svc.desc}
                   </p>
-                  <a href="#contact" style={{
-                    display: "inline-flex", alignItems: "center", gap: 10,
-                    marginTop: 40, fontSize: 12, fontWeight: 700, color: "var(--accent)",
-                    letterSpacing: "0.1em", borderBottom: "1px solid rgba(204,0,34,0.3)",
-                    paddingBottom: 4, transition: "gap 0.2s, border-color 0.2s",
-                  }}
-                    onMouseOver={(e) => { e.currentTarget.style.gap = "16px"; e.currentTarget.style.borderColor = "var(--accent)"; }}
-                    onMouseOut={(e) => { e.currentTarget.style.gap = "10px"; e.currentTarget.style.borderColor = "rgba(204,0,34,0.3)"; }}
-                  >
+                  <a href="#contact" className="gk-panel-link">
                     문의하기 →
                   </a>
                 </div>
 
                 {/* 하단 진행 바 */}
-                <div style={{
-                  position: "absolute", bottom: 0, left: 0, right: 0, height: 2,
-                  background: "rgba(255,255,255,0.04)",
-                }}>
+                <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 3, background: "rgba(10,22,40,0.06)" }}>
                   <div style={{
                     height: "100%",
                     width: `${((i + 1) / SERVICES.length) * 100}%`,
                     background: "var(--accent)",
-                    opacity: activePanel === i ? 1 : 0.25,
+                    opacity: activePanel === i ? 1 : 0.2,
                     transition: "opacity 0.3s",
                   }} />
                 </div>
@@ -416,7 +411,7 @@ export default function Home() {
             ))}
           </div>
 
-          {/* 패널 도트 네비게이션 (오버레이) */}
+          {/* 도트 네비 */}
           <div style={{
             position: "absolute", bottom: 28, left: "50%",
             transform: "translateX(-50%)",
@@ -424,11 +419,9 @@ export default function Home() {
           }}>
             {SERVICES.map((_, i) => (
               <div key={i} style={{
-                width: activePanel === i ? 28 : 6,
-                height: 3,
-                background: activePanel === i ? "var(--accent)" : "rgba(255,255,255,0.25)",
-                borderRadius: 2,
-                transition: "all 0.35s ease",
+                width: activePanel === i ? 28 : 6, height: 3,
+                background: activePanel === i ? "var(--accent)" : "rgba(10,22,40,0.2)",
+                borderRadius: 2, transition: "all 0.35s ease",
               }} />
             ))}
           </div>
@@ -444,8 +437,7 @@ export default function Home() {
               src={`https://www.youtube.com/embed/${VIDEO_SHOWCASE[0].id}?autoplay=1&mute=1&loop=1&playlist=${VIDEO_SHOWCASE[0].id}&controls=0&disablekb=1&modestbranding=1&playsinline=1&rel=0&showinfo=0`}
               allow="autoplay; encrypted-media"
               style={{
-                position: "absolute",
-                top: "50%", left: "50%",
+                position: "absolute", top: "50%", left: "50%",
                 transform: "translate(-50%, -50%)",
                 width: "177.78vh", minWidth: "100%",
                 height: "56.25vw", minHeight: "100%",
@@ -453,55 +445,57 @@ export default function Home() {
               }}
             />
           </div>
-          {/* 오버레이 */}
           <div style={{
             position: "absolute", inset: 0, zIndex: 1,
-            background: "linear-gradient(to right, rgba(8,18,30,0.85) 0%, rgba(8,18,30,0.4) 55%, rgba(8,18,30,0.15) 100%)",
+            background: "linear-gradient(to right, rgba(10,22,40,0.88) 0%, rgba(10,22,40,0.45) 55%, rgba(10,22,40,0.15) 100%)",
           }} />
           <div style={{ position: "absolute", inset: 0, zIndex: 2, display: "flex", alignItems: "center", padding: "0 80px" }}>
             <div className="video-label" style={{ maxWidth: 1200, margin: "0 auto", width: "100%" }}>
-              <p style={{ fontSize: 11, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.35em", marginBottom: 20 }}>
+              <p style={{ fontSize: 12, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.35em", marginBottom: 22 }}>
                 {VIDEO_SHOWCASE[0].label}
               </p>
-              <h3 style={{ fontSize: "clamp(32px, 5vw, 64px)", fontWeight: 900, color: "#fff", letterSpacing: "-0.03em", marginBottom: 16 }}>
+              <h3 style={{ fontSize: "clamp(32px, 5vw, 68px)", fontWeight: 900, color: "#fff", letterSpacing: "-0.03em", marginBottom: 18 }}>
                 {VIDEO_SHOWCASE[0].title}
               </h3>
-              <p style={{ fontSize: 13, color: "rgba(255,255,255,0.4)", letterSpacing: "0.04em" }}>
+              <p style={{ fontSize: 15, color: "rgba(255,255,255,0.45)", letterSpacing: "0.04em" }}>
                 {VIDEO_SHOWCASE[0].sub}
               </p>
             </div>
           </div>
         </section>
 
-        {/* ── ABOUT ── */}
-        <section id="about" style={{ padding: "120px 80px", background: "#06101a" }}>
+        {/* ── ABOUT (light) ── */}
+        <section id="about" style={{ padding: "128px 80px", background: "#FFFFFF" }}>
           <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "center" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 96, alignItems: "center" }}>
               <div>
-                <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.35em", color: "var(--accent)", marginBottom: 20 }}>WHO WE ARE</p>
-                <h3 className="reveal" style={{ fontSize: "clamp(28px, 4vw, 52px)", fontWeight: 900, letterSpacing: "-0.03em", marginBottom: 28, lineHeight: 1.15 }}>
+                <p className="reveal" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.35em", color: "var(--accent)", marginBottom: 22 }}>WHO WE ARE</p>
+                <h3 className="reveal" style={{
+                  fontSize: "clamp(32px, 4.5vw, 60px)", fontWeight: 900,
+                  letterSpacing: "-0.03em", marginBottom: 32, lineHeight: 1.15, color: "#0A1628",
+                }}>
                   독일 자동차 기술의<br />기준을 국내에
                 </h3>
-                <p className="reveal" style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.9, marginBottom: 20 }}>
+                <p className="reveal" style={{ fontSize: 18, color: "#3d5570", lineHeight: 2.0, marginBottom: 22 }}>
                   저먼코리아(주)는 독일의 자동차 시험·평가 기준과 노하우를 바탕으로
                   국내외 자동차 제조사·부품사에 전문 시험 서비스를 제공합니다.
                 </p>
-                <p className="reveal" style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.9 }}>
+                <p className="reveal" style={{ fontSize: 18, color: "#3d5570", lineHeight: 2.0 }}>
                   FCA·ADAS·자율주행 등 첨단 기술 시험부터 자기인증, 해외 시험 대행까지 —
                   국내에서 가장 독일과 가까운 자동차 평가 전문기업입니다.
                 </p>
               </div>
               <div>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "var(--border)" }}>
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2, background: "rgba(10,22,40,0.07)" }}>
                   {[
-                    { label: "경기도 화성시", sub: "시험 거점" },
+                    { label: "경기도 화성시", sub: "국내 시험 거점" },
                     { label: "031-366-8808", sub: "대표 전화" },
                     { label: "5개 분야", sub: "핵심 사업영역" },
                     { label: "독일·유럽·미국·중국", sub: "해외 파트너 거점" },
                   ].map((item) => (
-                    <div key={item.label} className="reveal" style={{ background: "var(--bg-3)", padding: "32px 28px" }}>
-                      <p style={{ fontSize: "clamp(13px, 1.4vw, 17px)", fontWeight: 800, color: "#fff", marginBottom: 6 }}>{item.label}</p>
-                      <p style={{ fontSize: 11, color: "var(--text-dim)", letterSpacing: "0.06em" }}>{item.sub}</p>
+                    <div key={item.label} className="reveal" style={{ background: "#FFFFFF", padding: "36px 32px" }}>
+                      <p style={{ fontSize: "clamp(14px, 1.5vw, 18px)", fontWeight: 800, color: "#0A1628", marginBottom: 8 }}>{item.label}</p>
+                      <p style={{ fontSize: 12, color: "#7090b0", letterSpacing: "0.06em" }}>{item.sub}</p>
                     </div>
                   ))}
                 </div>
@@ -510,80 +504,77 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── WHY GERMAN KOREA ── */}
-        <section style={{ padding: "120px 80px" }}>
+        {/* ── WHY GERMAN KOREA (light gray) ── */}
+        <section style={{ padding: "128px 80px", background: "#F3F7FC" }}>
           <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-            <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.35em", color: "var(--accent)", marginBottom: 20 }}>WHY GERMAN KOREA</p>
-            <h3 className="reveal" style={{ fontSize: "clamp(28px, 4vw, 52px)", fontWeight: 900, letterSpacing: "-0.03em", marginBottom: 72, maxWidth: 600 }}>
+            <p className="reveal" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.35em", color: "var(--accent)", marginBottom: 22 }}>WHY GERMAN KOREA</p>
+            <h3 className="reveal" style={{
+              fontSize: "clamp(32px, 4.5vw, 60px)", fontWeight: 900,
+              letterSpacing: "-0.03em", marginBottom: 80, maxWidth: 620, color: "#0A1628",
+            }}>
               한 곳에서 끝나는<br />자동차 시험 파트너
             </h3>
-            {/* 비대칭 벤토 그리드 */}
-            <div className="strengths-bento" style={{ display: "grid", gridTemplateColumns: "3fr 2fr", gap: 2, background: "rgba(204,0,34,0.04)", border: "1px solid rgba(204,0,34,0.06)" }}>
-              {/* 카드 1 — 크게 */}
-              <div
-                className="strength-card"
-                style={{
-                  position: "relative", overflow: "hidden",
-                  padding: "56px 52px", background: "#06101a",
-                  transition: "background 0.3s",
-                }}
-                onMouseOver={(e) => { e.currentTarget.style.background = "#071420"; }}
-                onMouseOut={(e) => { e.currentTarget.style.background = "#06101a"; }}
+
+            {/* 비대칭 벤토 */}
+            <div className="strengths-bento" style={{ display: "grid", gridTemplateColumns: "3fr 2fr", gap: 2, background: "rgba(10,22,40,0.07)" }}>
+              {/* 카드 1 */}
+              <div className="strength-card" style={{
+                position: "relative", overflow: "hidden", padding: "60px 56px",
+                background: "#FFFFFF",
+                transition: "box-shadow 0.3s",
+              }}
+                onMouseOver={(e) => { e.currentTarget.style.boxShadow = "0 8px 40px rgba(0,45,114,0.08)"; }}
+                onMouseOut={(e) => { e.currentTarget.style.boxShadow = "none"; }}
               >
                 <span style={{
-                  position: "absolute", top: -10, right: 16, fontSize: 140, fontWeight: 900, lineHeight: 1,
-                  color: "rgba(204,0,34,0.04)", letterSpacing: "-0.05em", userSelect: "none", pointerEvents: "none",
+                  position: "absolute", top: -12, right: 16, fontSize: 140, fontWeight: 900, lineHeight: 1,
+                  color: "rgba(0,45,114,0.04)", letterSpacing: "-0.05em", userSelect: "none", pointerEvents: "none",
                 }}>{STRENGTHS[0].n}</span>
-                <p style={{ fontSize: 11, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.2em", marginBottom: 20 }}>{STRENGTHS[0].n}</p>
-                <h4 style={{ fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 800, marginBottom: 16, lineHeight: 1.3 }}>{STRENGTHS[0].title}</h4>
-                <div style={{ width: 32, height: 2, background: "linear-gradient(90deg, var(--accent), transparent)", marginBottom: 20 }} />
-                <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.9, maxWidth: 400 }}>{STRENGTHS[0].desc}</p>
+                <p style={{ fontSize: 12, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.22em", marginBottom: 22 }}>{STRENGTHS[0].n}</p>
+                <h4 style={{ fontSize: "clamp(20px, 2.2vw, 28px)", fontWeight: 800, marginBottom: 18, lineHeight: 1.3, color: "#0A1628" }}>{STRENGTHS[0].title}</h4>
+                <div style={{ width: 36, height: 3, background: "var(--accent)", marginBottom: 22, opacity: 0.8 }} />
+                <p style={{ fontSize: 17, color: "#3d5570", lineHeight: 1.9, maxWidth: 400 }}>{STRENGTHS[0].desc}</p>
               </div>
-
-              {/* 카드 2 — 콤팩트 */}
-              <div
-                className="strength-card"
-                style={{
-                  position: "relative", overflow: "hidden",
-                  padding: "56px 40px", background: "#07111d",
-                  borderLeft: "1px solid rgba(255,255,255,0.04)",
-                  transition: "background 0.3s",
-                }}
-                onMouseOver={(e) => { e.currentTarget.style.background = "#081520"; }}
-                onMouseOut={(e) => { e.currentTarget.style.background = "#07111d"; }}
+              {/* 카드 2 */}
+              <div className="strength-card" style={{
+                position: "relative", overflow: "hidden", padding: "60px 44px",
+                background: "#EBF0F8",
+                borderLeft: "1px solid rgba(10,22,40,0.07)",
+                transition: "box-shadow 0.3s",
+              }}
+                onMouseOver={(e) => { e.currentTarget.style.boxShadow = "0 8px 40px rgba(0,45,114,0.08)"; }}
+                onMouseOut={(e) => { e.currentTarget.style.boxShadow = "none"; }}
               >
                 <span style={{
                   position: "absolute", bottom: -10, right: 16, fontSize: 120, fontWeight: 900, lineHeight: 1,
-                  color: "rgba(204,0,34,0.04)", letterSpacing: "-0.05em", userSelect: "none", pointerEvents: "none",
+                  color: "rgba(0,45,114,0.05)", letterSpacing: "-0.05em", userSelect: "none", pointerEvents: "none",
                 }}>{STRENGTHS[1].n}</span>
-                <p style={{ fontSize: 11, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.2em", marginBottom: 20 }}>{STRENGTHS[1].n}</p>
-                <h4 style={{ fontSize: "clamp(17px, 1.8vw, 22px)", fontWeight: 800, marginBottom: 16, lineHeight: 1.3 }}>{STRENGTHS[1].title}</h4>
-                <div style={{ width: 28, height: 2, background: "linear-gradient(90deg, var(--accent), transparent)", marginBottom: 20 }} />
-                <p style={{ fontSize: 14, color: "var(--text-muted)", lineHeight: 1.85 }}>{STRENGTHS[1].desc}</p>
+                <p style={{ fontSize: 12, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.22em", marginBottom: 22 }}>{STRENGTHS[1].n}</p>
+                <h4 style={{ fontSize: "clamp(18px, 2vw, 24px)", fontWeight: 800, marginBottom: 18, lineHeight: 1.3, color: "#0A1628" }}>{STRENGTHS[1].title}</h4>
+                <div style={{ width: 30, height: 3, background: "var(--accent)", marginBottom: 22, opacity: 0.8 }} />
+                <p style={{ fontSize: 16, color: "#3d5570", lineHeight: 1.9 }}>{STRENGTHS[1].desc}</p>
               </div>
-
-              {/* 카드 3 — 가로형 전폭 */}
-              <div
-                className="strength-card strength-card-wide"
-                style={{
-                  gridColumn: "span 2",
-                  display: "flex", alignItems: "center", gap: 80,
-                  padding: "44px 52px", background: "#050e18",
-                  borderTop: "1px solid rgba(255,255,255,0.04)",
-                  transition: "background 0.3s",
-                }}
-                onMouseOver={(e) => { e.currentTarget.style.background = "#060f1a"; }}
-                onMouseOut={(e) => { e.currentTarget.style.background = "#050e18"; }}
+              {/* 카드 3 — 전폭 가로형 */}
+              <div className="strength-card strength-card-wide" style={{
+                gridColumn: "span 2", display: "flex", alignItems: "center", gap: 80,
+                padding: "48px 56px", background: "#0A1628",
+                borderTop: "1px solid rgba(10,22,40,0.07)",
+                transition: "background 0.3s",
+              }}
+                onMouseOver={(e) => { (e.currentTarget as HTMLElement).style.background = "#0D1E35"; }}
+                onMouseOut={(e) => { (e.currentTarget as HTMLElement).style.background = "#0A1628"; }}
               >
                 <div style={{ flexShrink: 0 }}>
-                  <p style={{ fontSize: 11, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.2em", marginBottom: 12 }}>{STRENGTHS[2].n}</p>
-                  <h4 style={{ fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 800, lineHeight: 1.25, minWidth: 200 }}>{STRENGTHS[2].title}</h4>
+                  <p style={{ fontSize: 12, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.22em", marginBottom: 14 }}>{STRENGTHS[2].n}</p>
+                  <h4 style={{ fontSize: "clamp(20px, 2.2vw, 28px)", fontWeight: 800, lineHeight: 1.25, minWidth: 220, color: "#fff" }}>{STRENGTHS[2].title}</h4>
                 </div>
-                <div style={{ width: 1, height: 56, background: "rgba(204,0,34,0.2)", flexShrink: 0 }} />
-                <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.9 }}>{STRENGTHS[2].desc}</p>
+                <div style={{ width: 1, height: 60, background: "rgba(204,0,34,0.25)", flexShrink: 0 }} />
+                <p style={{ fontSize: 17, color: "rgba(200,218,240,0.75)", lineHeight: 1.9 }}>{STRENGTHS[2].desc}</p>
                 <div style={{ marginLeft: "auto", flexShrink: 0 }}>
-                  <div style={{ width: 48, height: 48, borderRadius: "50%", border: "1px solid rgba(204,0,34,0.3)", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M9 3l6 6-6 6" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  <div style={{ width: 52, height: 52, borderRadius: "50%", border: "1px solid rgba(204,0,34,0.35)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                      <path d="M3 9h12M9 3l6 6-6 6" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
                   </div>
                 </div>
               </div>
@@ -601,8 +592,7 @@ export default function Home() {
               src={`https://www.youtube.com/embed/${VIDEO_SHOWCASE[1].id}?autoplay=1&mute=1&loop=1&playlist=${VIDEO_SHOWCASE[1].id}&controls=0&disablekb=1&modestbranding=1&playsinline=1&rel=0&showinfo=0`}
               allow="autoplay; encrypted-media"
               style={{
-                position: "absolute",
-                top: "50%", left: "50%",
+                position: "absolute", top: "50%", left: "50%",
                 transform: "translate(-50%, -50%)",
                 width: "177.78vh", minWidth: "100%",
                 height: "56.25vw", minHeight: "100%",
@@ -612,79 +602,86 @@ export default function Home() {
           </div>
           <div style={{
             position: "absolute", inset: 0, zIndex: 1,
-            background: "linear-gradient(to left, rgba(8,18,30,0.85) 0%, rgba(8,18,30,0.4) 55%, rgba(8,18,30,0.15) 100%)",
+            background: "linear-gradient(to left, rgba(10,22,40,0.88) 0%, rgba(10,22,40,0.45) 55%, rgba(10,22,40,0.15) 100%)",
           }} />
           <div style={{ position: "absolute", inset: 0, zIndex: 2, display: "flex", alignItems: "center", justifyContent: "flex-end", padding: "0 80px" }}>
             <div className="video-label" style={{ textAlign: "right", maxWidth: 560 }}>
-              <p style={{ fontSize: 11, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.35em", marginBottom: 20 }}>
+              <p style={{ fontSize: 12, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.35em", marginBottom: 22 }}>
                 {VIDEO_SHOWCASE[1].label}
               </p>
-              <h3 style={{ fontSize: "clamp(28px, 4.5vw, 60px)", fontWeight: 900, color: "#fff", letterSpacing: "-0.03em", marginBottom: 16 }}>
+              <h3 style={{ fontSize: "clamp(28px, 4.5vw, 64px)", fontWeight: 900, color: "#fff", letterSpacing: "-0.03em", marginBottom: 18 }}>
                 {VIDEO_SHOWCASE[1].title}
               </h3>
-              <p style={{ fontSize: 13, color: "rgba(255,255,255,0.4)", letterSpacing: "0.04em" }}>
+              <p style={{ fontSize: 15, color: "rgba(255,255,255,0.45)", letterSpacing: "0.04em" }}>
                 {VIDEO_SHOWCASE[1].sub}
               </p>
             </div>
           </div>
         </section>
 
-        {/* ── PROCESS ── */}
-        <section id="process" style={{ padding: "120px 80px", background: "#06101a" }}>
+        {/* ── PROCESS (white) ── */}
+        <section id="process" style={{ padding: "128px 80px", background: "#FFFFFF" }}>
           <div style={{ maxWidth: 1200, margin: "0 auto" }}>
-            <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.35em", color: "var(--accent)", marginBottom: 20 }}>PROCESS</p>
-            <h3 className="reveal" style={{ fontSize: "clamp(28px, 4vw, 52px)", fontWeight: 900, letterSpacing: "-0.03em", marginBottom: 16 }}>
+            <p className="reveal" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.35em", color: "var(--accent)", marginBottom: 22 }}>PROCESS</p>
+            <h3 className="reveal" style={{
+              fontSize: "clamp(32px, 4.5vw, 60px)", fontWeight: 900,
+              letterSpacing: "-0.03em", marginBottom: 18, color: "#0A1628",
+            }}>
               시험 의뢰부터<br />결과 보고까지
             </h3>
-            <p className="reveal" style={{ fontSize: 15, color: "var(--text-muted)", marginBottom: 80, lineHeight: 1.8, maxWidth: 560 }}>
+            <p className="reveal" style={{ fontSize: 18, color: "#3d5570", marginBottom: 88, lineHeight: 1.9, maxWidth: 580 }}>
               체계적인 4단계 프로세스로 시험의 신뢰도와 정확성을 보장합니다.
             </p>
             <div className="process-grid" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 0, position: "relative" }}>
               <div style={{
                 position: "absolute", top: 36, left: "12.5%", right: "12.5%",
-                height: 1, background: "linear-gradient(90deg, transparent, rgba(204,0,34,0.4) 20%, rgba(204,0,34,0.4) 80%, transparent)",
+                height: 1, background: "linear-gradient(90deg, transparent, rgba(204,0,34,0.3) 20%, rgba(204,0,34,0.3) 80%, transparent)",
                 pointerEvents: "none", zIndex: 0,
               }} />
               {PROCESS.map((p, i) => (
                 <div key={p.step} className="proc-step" style={{
-                  padding: "0 32px 48px",
-                  borderRight: i < 3 ? "1px solid rgba(255,255,255,0.05)" : "none",
+                  padding: "0 36px 52px",
+                  borderRight: i < 3 ? "1px solid rgba(10,22,40,0.07)" : "none",
                   position: "relative", zIndex: 1,
                 }}>
                   <div style={{
                     width: 72, height: 72, borderRadius: "50%",
-                    border: "1px solid rgba(204,0,34,0.35)", background: "rgba(204,0,34,0.06)",
+                    border: "1px solid rgba(204,0,34,0.3)", background: "rgba(204,0,34,0.05)",
                     display: "flex", alignItems: "center", justifyContent: "center",
-                    marginBottom: 32, backdropFilter: "blur(8px)",
+                    marginBottom: 36,
                   }}>
                     <span style={{ fontSize: 13, fontWeight: 800, color: "var(--accent)", letterSpacing: "0.08em" }}>{p.step}</span>
                   </div>
-                  <h4 style={{ fontSize: 19, fontWeight: 800, marginBottom: 12 }}>{p.title}</h4>
-                  <p style={{ fontSize: 13, color: "var(--text-muted)", lineHeight: 1.8 }}>{p.desc}</p>
+                  <h4 style={{ fontSize: 21, fontWeight: 800, marginBottom: 14, color: "#0A1628" }}>{p.title}</h4>
+                  <p style={{ fontSize: 15, color: "#3d5570", lineHeight: 1.85 }}>{p.desc}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ── CONTACT CTA ── */}
-        <section id="contact" style={{ padding: "160px 80px", textAlign: "center", position: "relative", overflow: "hidden" }}>
+        {/* ── CONTACT CTA (dark) ── */}
+        <section id="contact" style={{ padding: "160px 80px", textAlign: "center", background: "#0A1628", position: "relative", overflow: "hidden" }}>
           <div style={{
             position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)",
             width: "80vw", height: "80vw", borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(204,0,34,0.04) 0%, transparent 65%)",
+            background: "radial-gradient(circle, rgba(204,0,34,0.05) 0%, transparent 62%)",
             pointerEvents: "none",
           }} />
+          <div className="gk-grid-bg" style={{ position: "absolute", inset: 0, opacity: 0.6 }} />
           <div style={{ maxWidth: 800, margin: "0 auto", position: "relative" }}>
-            <p className="reveal" style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.35em", color: "var(--accent)", marginBottom: 24 }}>CONTACT</p>
-            <h3 className="reveal" style={{ fontSize: "clamp(32px, 5vw, 68px)", fontWeight: 900, letterSpacing: "-0.03em", marginBottom: 24 }}>
+            <p className="reveal" style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.35em", color: "var(--accent)", marginBottom: 28 }}>CONTACT</p>
+            <h3 className="reveal" style={{
+              fontSize: "clamp(36px, 5.5vw, 76px)", fontWeight: 900,
+              letterSpacing: "-0.03em", marginBottom: 28, color: "#fff",
+            }}>
               시험 의뢰 및<br />문의는 여기로
             </h3>
-            <p className="reveal" style={{ fontSize: 15, color: "var(--text-muted)", marginBottom: 12, lineHeight: 1.8 }}>
+            <p className="reveal" style={{ fontSize: 18, color: "rgba(200,218,240,0.65)", marginBottom: 14, lineHeight: 1.9 }}>
               경기도 화성시 남양읍 화성로 1444-12
             </p>
-            <p className="reveal" style={{ fontSize: 13, color: "var(--text-dim)", marginBottom: 52, letterSpacing: "0.02em" }}>
-              영업일 기준 24시간 내 답변 드립니다.
+            <p className="reveal" style={{ fontSize: 15, color: "rgba(200,218,240,0.4)", marginBottom: 60, letterSpacing: "0.02em" }}>
+              영업일 기준 24시간 내 답변 드립니다
             </p>
             <div className="reveal cta-buttons" style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
               <a href="tel:031-366-8808" className="gk-cta-btn">031-366-8808 전화하기</a>
@@ -697,50 +694,61 @@ export default function Home() {
       </div>
 
       <style>{`
+        /* CTA 버튼 */
         .gk-cta-btn {
           padding: 18px 48px; background: var(--accent); color: #fff;
-          font-size: 14px; font-weight: 800; letter-spacing: 0.06em;
-          box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 4px 20px rgba(204,0,34,0.2);
-          transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s, opacity 0.2s;
+          font-size: 15px; font-weight: 800; letter-spacing: 0.06em;
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 4px 20px rgba(204,0,34,0.22);
+          transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s;
           will-change: transform;
         }
         .gk-cta-btn:hover {
           transform: translateY(-2px);
-          box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 10px 32px rgba(204,0,34,0.3);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 10px 32px rgba(204,0,34,0.32);
         }
         .gk-cta-btn:active { transform: scale(0.97) translateY(0); }
 
         .gk-outline-btn {
-          padding: 18px 48px; border: 1px solid rgba(255,255,255,0.14); color: rgba(255,255,255,0.6);
-          font-size: 14px; font-weight: 600; letter-spacing: 0.06em;
+          padding: 18px 48px; border: 1px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.65);
+          font-size: 15px; font-weight: 600; letter-spacing: 0.06em;
           transition: all 0.25s cubic-bezier(0.16,1,0.3,1);
         }
-        .gk-outline-btn:hover { border-color: rgba(255,255,255,0.32); color: #fff; transform: translateY(-1px); }
+        .gk-outline-btn:hover { border-color: rgba(255,255,255,0.38); color: #fff; transform: translateY(-1px); }
         .gk-outline-btn:active { transform: scale(0.97); }
 
+        /* 서비스 패널 링크 */
+        .gk-panel-link {
+          display: inline-flex; align-items: center; gap: 10;
+          margin-top: 44px; font-size: 13px; font-weight: 700;
+          color: var(--accent); letter-spacing: 0.1em;
+          border-bottom: 1px solid rgba(204,0,34,0.3); padding-bottom: 4px;
+          transition: gap 0.2s, border-color 0.2s;
+        }
+        .gk-panel-link:hover { gap: 16px; border-color: var(--accent); }
+
         @media (max-width: 768px) {
-          .hero-section { padding: 80px 20px 64px !important; min-height: 100svh !important; }
+          .hero-section { padding: 80px 20px 64px !important; }
           .hero-buttons { flex-direction: column !important; }
           .hero-buttons a { width: 100% !important; text-align: center !important; }
 
-          #about { padding: 64px 20px !important; }
-          #about > div > div { grid-template-columns: 1fr !important; gap: 40px !important; }
+          #about { padding: 72px 20px !important; }
+          #about > div > div { grid-template-columns: 1fr !important; gap: 48px !important; }
 
           .strengths-bento { grid-template-columns: 1fr !important; }
-          .strength-card { padding: 36px 24px !important; }
-          .strength-card-wide { flex-direction: column !important; gap: 24px !important; padding: 36px 24px !important; }
+          .strength-card { padding: 40px 28px !important; }
+          .strength-card-wide { flex-direction: column !important; gap: 24px !important; padding: 40px 28px !important; }
           .strength-card-wide > div:nth-child(2) { display: none !important; }
           .strength-card-wide > div:last-child { display: none !important; }
 
           .video-section { height: 56vw !important; min-height: 240px !important; }
           .video-section iframe { width: 100% !important; height: 100% !important; transform: none !important; top: 0 !important; left: 0 !important; }
 
-          #process { padding: 64px 20px !important; }
+          #process { padding: 72px 20px !important; }
           .process-grid { grid-template-columns: repeat(2, 1fr) !important; }
           .proc-step { border-right: none !important; padding: 32px 16px !important; }
-          .proc-step:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.05) !important; }
+          .proc-step:nth-child(odd) { border-right: 1px solid rgba(10,22,40,0.07) !important; }
 
-          #contact { padding: 80px 20px !important; }
+          #contact { padding: 88px 20px !important; }
           .cta-buttons { flex-direction: column !important; align-items: stretch !important; }
           .cta-buttons a { text-align: center !important; padding: 18px 24px !important; }
         }
