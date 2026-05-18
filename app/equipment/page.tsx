@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 import Link from "next/link";
+import Image from "next/image";
 
 const EQUIPMENT = [
   {
@@ -12,7 +13,7 @@ const EQUIPMENT = [
     spec: "—",
     purpose: "속도/위치 측정",
     qty: "—",
-    img: "https://en.racelogic.support/@api/deki/files/25131/VB3i_range_photo.png?revision=1",
+    img: "/images/equipment/vbox3i.jpg",
   },
   {
     no: 10,
@@ -21,7 +22,7 @@ const EQUIPMENT = [
     spec: "센서 8채널, 카운터 6채널, CAN 3채널, 온도 8채널, GPS 100Hz",
     purpose: "범용 데이터 수집",
     qty: "7 set",
-    img: "https://ccc.dewetron.com/js/kcfinder/upload/images/DEWE2-M4-right-front.jpg",
+    img: "/images/equipment/dewe2m4.jpg",
   },
   {
     no: 9,
@@ -30,7 +31,7 @@ const EQUIPMENT = [
     spec: "전압 4채널, 전류 4채널, 전압범위 15V~1500V, 전류범위 0.1A~8000A",
     purpose: "전력량 측정",
     qty: "1 set",
-    img: "https://www.hioki.com/system/files/image/2021-06/PW3390_EN_1_.png",
+    img: "/images/equipment/pw3390.jpg",
   },
   {
     no: 8,
@@ -39,7 +40,7 @@ const EQUIPMENT = [
     spec: "측정범위 ±100Nm, 측정오차 0.1%FS, 측정각도 ±1440도",
     purpose: "조향성능 계측",
     qty: "1 set",
-    img: "https://www.imc-tm.de/fileadmin/Public/Products/Sensor_Solutions/CAEMAX/CLS/clsx-header.jpg",
+    img: "/images/equipment/clsx.jpg",
   },
   {
     no: 7,
@@ -48,7 +49,7 @@ const EQUIPMENT = [
     spec: "Measuring range 0.3~120 L/h, Accuracy ±0.2% of reading",
     purpose: "연료 소모량 측정",
     qty: "2 set",
-    img: "https://www.onosokki.co.jp/HP-WK/products/keisoku/flow/img/mf3200_top.jpg",
+    img: "/images/equipment/mf3200.jpg",
   },
   {
     no: 6,
@@ -57,7 +58,7 @@ const EQUIPMENT = [
     spec: "Velocity accuracy 0.1km/h, Update rate 20Hz, Resolution 0.01km/h",
     purpose: "속도/고도/위치 측정",
     qty: "1 set",
-    img: "https://en.racelogic.support/@api/deki/files/17015/VB2SX-V3.png?revision=1",
+    img: "/images/equipment/vbox2.jpg",
   },
   {
     no: 5,
@@ -66,7 +67,7 @@ const EQUIPMENT = [
     spec: "기본 10채널, 전 채널 isolated, 샘플링 최고 10ms",
     purpose: "온도/전압 측정",
     qty: "3 set",
-    img: "https://graphtec.co.jp/wp-content/uploads/product_gl240-img046.webp",
+    img: "/images/equipment/gl240.webp",
   },
   {
     no: 4,
@@ -75,7 +76,7 @@ const EQUIPMENT = [
     spec: "270×247×91mm, 12V, SD카드 8GB, 배터리 3.7V/3000mAh",
     purpose: "진동/소음 측정",
     qty: "1 set",
-    img: "https://germankorea.com/data/file/equip/1935545364_FyDtGv3Q_4be75c41454a74a363b023f3c08983b565f2b743.png",
+    img: "/images/equipment/nvi101.jpg",
   },
   {
     no: 3,
@@ -84,7 +85,7 @@ const EQUIPMENT = [
     spec: "고장코드 검색, 센서데이터 점검, 주행데이터 분석, 차량 통신라인 점검",
     purpose: "차량 정비 및 점검",
     qty: "1 set",
-    img: "https://www.hickleys.com/images/diagnostics/testers/gscan2/gscan2.png",
+    img: "/images/equipment/gscan2.jpg",
   },
   {
     no: 2,
@@ -93,7 +94,7 @@ const EQUIPMENT = [
     spec: "비행시간 23~27분, 제어범위 7km, 영상해상도 6K/5.2K, 최대속도 94kph",
     purpose: "홍보영상 및 수직고도 촬영",
     qty: "1 set",
-    img: "https://www.dronenerds.com/cdn/shop/files/Inspire2-Zenmuse-X5S_eb2a15a7-441f-4584-b9d8-70d0f73d23c8.png",
+    img: "/images/equipment/inspire2.jpg",
   },
   {
     no: 1,
@@ -102,7 +103,7 @@ const EQUIPMENT = [
     spec: "최대 측정용량 36.2kg, 정밀도 1000mg, 저울판 400×300mm",
     purpose: "중량 측정 / DPF Soot 무게 변화 계측",
     qty: "1 set",
-    img: "https://www.dataweigh.com/media/13804/wl-10143-_wb_rgb.jpg",
+    img: "/images/equipment/mse36200s.jpg",
   },
 ];
 
@@ -140,7 +141,7 @@ export default function EquipmentPage() {
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "48px clamp(24px,5vw,96px) 96px" }}>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 3 }}>
-            {EQUIPMENT.map((item) => (
+            {EQUIPMENT.map((item, idx) => (
               <div
                 key={item.no}
                 className="eq-card"
@@ -148,41 +149,36 @@ export default function EquipmentPage() {
                   position: "relative",
                   height: 340,
                   overflow: "hidden",
-                  cursor: "default",
                 }}
               >
-                {/* 배경 이미지 */}
-                <div
+                {/* Next.js Image — 자동 WebP 변환 + lazy loading */}
+                <Image
+                  src={item.img}
+                  alt={item.name}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  style={{ objectFit: "contain", objectPosition: "center", backgroundColor: "#0d1e33" }}
                   className="eq-img"
-                  style={{
-                    position: "absolute", inset: 0,
-                    backgroundImage: `url(${item.img})`,
-                    backgroundSize: "contain",
-                    backgroundPosition: "center",
-                    backgroundRepeat: "no-repeat",
-                    backgroundColor: "#0d1e33",
-                    transition: "transform 0.55s cubic-bezier(0.16,1,0.3,1)",
-                  }}
+                  priority={idx < 3}
+                  quality={80}
                 />
 
                 {/* 그라디언트 오버레이 */}
                 <div style={{
-                  position: "absolute", inset: 0,
-                  background: "linear-gradient(to top, rgba(6,14,26,0.97) 0%, rgba(6,14,26,0.6) 50%, rgba(6,14,26,0.2) 100%)",
-                  zIndex: 1,
+                  position: "absolute", inset: 0, zIndex: 1,
+                  background: "linear-gradient(to top, rgba(6,14,26,0.97) 0%, rgba(6,14,26,0.6) 50%, rgba(6,14,26,0.15) 100%)",
                 }} />
 
-                {/* 텍스트 콘텐츠 */}
+                {/* 텍스트 */}
                 <div style={{
                   position: "absolute", inset: 0, zIndex: 2,
                   display: "flex", flexDirection: "column", justifyContent: "flex-end",
                   padding: "24px 28px",
                 }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 12 }}>
-                    <span style={{
-                      fontSize: 10, fontWeight: 800, color: "var(--accent)",
-                      letterSpacing: "0.16em",
-                    }}>NO. {String(item.no).padStart(2, "0")}</span>
+                    <span style={{ fontSize: 10, fontWeight: 800, color: "var(--accent)", letterSpacing: "0.16em" }}>
+                      NO. {String(item.no).padStart(2, "0")}
+                    </span>
                     {item.qty !== "—" && (
                       <span style={{
                         fontSize: 10, fontWeight: 700,
@@ -205,11 +201,9 @@ export default function EquipmentPage() {
                       {item.spec}
                     </p>
                   )}
-                  <p style={{
-                    fontSize: 11, fontWeight: 600,
-                    color: "rgba(200,218,240,0.4)",
-                    letterSpacing: "0.06em",
-                  }}>{item.purpose}</p>
+                  <p style={{ fontSize: 11, fontWeight: 600, color: "rgba(200,218,240,0.4)", letterSpacing: "0.06em" }}>
+                    {item.purpose}
+                  </p>
                 </div>
               </div>
             ))}
@@ -251,9 +245,8 @@ export default function EquipmentPage() {
       <SiteFooter />
 
       <style>{`
-        .eq-card:hover .eq-img {
-          transform: scale(1.06);
-        }
+        .eq-img { transition: transform 0.55s cubic-bezier(0.16,1,0.3,1); }
+        .eq-card:hover .eq-img { transform: scale(1.06); }
       `}</style>
     </>
   );
