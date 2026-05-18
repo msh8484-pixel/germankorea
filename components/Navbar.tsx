@@ -3,7 +3,15 @@ import { useState } from "react";
 import Link from "next/link";
 
 const NAV = [
-  { label: "회사소개", href: "/#about" },
+  {
+    label: "회사소개",
+    href: "/about",
+    sub: [
+      { label: "회사개요", href: "/about" },
+      { label: "회사 연혁", href: "/about#history" },
+      { label: "찾아오시는 길", href: "/about#location" },
+    ],
+  },
   {
     label: "사업분야",
     href: "/#services",

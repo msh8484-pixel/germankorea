@@ -324,20 +324,26 @@ export default function Home() {
                 현재 및 미래 자동차의<br />중심, 저먼코리아
               </h2>
               <p className="reveal" style={{ fontSize: 17, color: "#3d5570", lineHeight: 2.0, marginBottom: 20 }}>
-                저먼코리아(주)는 자동차 시험·평가 전문기업으로,
-                국내외 자동차 제조사 및 부품사에 전문 시험 서비스를 제공합니다.
+                저먼코리아㈜는 한국 최초 국내 자동차 5개사 및 부품사의 실차시험 전문 수행업체로
+                2001년 설립되어, 필드 내구시험·성능시험·FCA/ADAS 등 실차시험 분야의 선두주자입니다.
               </p>
               <p className="reveal" style={{ fontSize: 17, color: "#3d5570", lineHeight: 2.0 }}>
                 미래, 환경을 생각하는 저먼코리아는 실차시험의 경험과 노하우로
                 다양한 해외시험을 수행 및 지원합니다.
               </p>
+              <div className="reveal" style={{ marginTop: 32 }}>
+                <a href="/about" style={{
+                  display: "inline-flex", alignItems: "center", gap: 8,
+                  fontSize: 13, fontWeight: 700, color: "var(--accent)", letterSpacing: "0.06em",
+                }}>회사 소개 더 보기 →</a>
+              </div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 2, background: "rgba(10,22,40,0.08)" }}>
               {[
-                { val: "5개 분야", sub: "핵심 사업영역" },
-                { val: "031-366-8808", sub: "대표 전화" },
-                { val: "경기도 화성시", sub: "국내 거점" },
-                { val: "중국 현지", sub: "해외 시험 인프라" },
+                { val: "2001", sub: "설립 연도" },
+                { val: "39명", sub: "임직원 수" },
+                { val: "이노비즈", sub: "기술혁신형 중소기업 인증" },
+                { val: "ISO 9001", sub: "품질경영시스템 인증" },
               ].map((item) => (
                 <div key={item.val} className="reveal" style={{ background: "#F3F7FC", padding: "36px 28px" }}>
                   <p style={{ fontSize: "clamp(13px,1.4vw,17px)", fontWeight: 800, color: "#0A1628", marginBottom: 8 }}>{item.val}</p>
