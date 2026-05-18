@@ -9,7 +9,7 @@
   --text-dim: #7a98b4;
   --accent: #CC0022;
   --border: rgba(255,255,255,0.08);
-  --font: 'Pretendard', 'Inter', -apple-system, sans-serif;
+  --font: 'Pretendard', -apple-system, sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

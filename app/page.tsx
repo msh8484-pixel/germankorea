@@ -71,6 +71,12 @@ const PROCESS = [
 
 // 영상 쇼케이스에 삽입할 YouTube 영상 ID
 // 실제 시험 영상으로 교체하세요
+const MARQUEE_ITEMS = [
+  "국내 실차시험", "·", "해외 실차시험", "·", "FCA · AEB · ADAS", "·",
+  "자율주행 검증", "·", "기술교육", "·", "자기인증", "·",
+  "Euro NCAP", "·", "C-NCAP", "·", "독일 기반 네트워크", "·",
+];
+
 const VIDEO_SHOWCASE = [
   {
     id: "rU3mEBSRiUU",          // 교체 필요: 저먼코리아 실제 시험 영상
@@ -119,15 +125,15 @@ export default function Home() {
     if (introVisible) return;
 
     const ctx = gsap.context(() => {
-      // 히어로 텍스트 등장
-      gsap.fromTo(".hero-line", { y: 80, opacity: 0 }, {
-        y: 0, opacity: 1, duration: 0.9, stagger: 0.13, ease: "power3.out", delay: 0.1,
+      // 히어로 텍스트 등장 (blur + translate)
+      gsap.fromTo(".hero-line", { y: 72, opacity: 0, filter: "blur(14px)" }, {
+        y: 0, opacity: 1, filter: "blur(0px)", duration: 1.0, stagger: 0.14, ease: "power3.out", delay: 0.1,
       });
-      gsap.fromTo(".hero-sub", { opacity: 0, y: 20 }, {
-        opacity: 1, y: 0, duration: 0.7, ease: "power2.out", delay: 0.55,
+      gsap.fromTo(".hero-sub", { opacity: 0, y: 20, filter: "blur(8px)" }, {
+        opacity: 1, y: 0, filter: "blur(0px)", duration: 0.8, ease: "power2.out", delay: 0.6,
       });
-      gsap.fromTo(".hero-buttons", { opacity: 0, y: 16 }, {
-        opacity: 1, y: 0, duration: 0.6, ease: "power2.out", delay: 0.8,
+      gsap.fromTo(".hero-buttons", { opacity: 0, y: 16, filter: "blur(6px)" }, {
+        opacity: 1, y: 0, filter: "blur(0px)", duration: 0.7, ease: "power2.out", delay: 0.85,
       });
 
       // 수평 스크롤 — 서비스 패널
@@ -157,18 +163,18 @@ export default function Home() {
         void hST;
       }
 
-      // 스크롤 트리거 reveal
+      // 스크롤 트리거 reveal (blur + translate)
       gsap.utils.toArray<HTMLElement>(".reveal").forEach((el) => {
-        gsap.fromTo(el, { opacity: 0, y: 40 }, {
-          opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
-          scrollTrigger: { trigger: el, start: "top 82%", once: true },
+        gsap.fromTo(el, { opacity: 0, y: 32, filter: "blur(8px)" }, {
+          opacity: 1, y: 0, filter: "blur(0px)", duration: 0.85, ease: "power3.out",
+          scrollTrigger: { trigger: el, start: "top 83%", once: true },
         });
       });
 
       // 강점 카드
       gsap.fromTo(".strength-card", { opacity: 0, y: 28 }, {
         opacity: 1, y: 0, duration: 0.6, stagger: 0.12, ease: "power2.out",
-        scrollTrigger: { trigger: ".strengths-grid", start: "top 75%", once: true },
+        scrollTrigger: { trigger: ".strengths-bento", start: "top 75%", once: true },
       });
 
       // 프로세스 스텝
@@ -215,7 +221,7 @@ export default function Home() {
 
         {/* ── HERO ── */}
         <section className="hero-section" style={{
-          minHeight: "100vh",
+          minHeight: "100dvh",
           display: "flex", flexDirection: "column", justifyContent: "flex-end",
           padding: "0 80px 100px",
           position: "relative", overflow: "hidden",
@@ -272,7 +278,7 @@ export default function Home() {
               </div>
               <div className="hero-line-wrap">
                 <h2 className="hero-line" style={{ fontSize: "clamp(40px, 7.5vw, 104px)", fontWeight: 900, lineHeight: 1.0, letterSpacing: "-0.04em" }}>
-                  <span className="gk-gradient-text">독일 기준</span>
+                  <span style={{ color: "var(--accent)" }}>독일 기준</span>
                   <span style={{ color: "#fff" }}>으로.</span>
                 </h2>
               </div>
@@ -299,19 +305,39 @@ export default function Home() {
           </div>
         </section>
 
+        {/* ── MARQUEE STRIP ── */}
+        <div style={{
+          overflow: "hidden",
+          borderTop: "1px solid rgba(255,255,255,0.05)",
+          borderBottom: "1px solid rgba(255,255,255,0.05)",
+          background: "#050c15", padding: "13px 0", position: "relative", zIndex: 2,
+        }}>
+          <div className="marquee-track">
+            {[...MARQUEE_ITEMS, ...MARQUEE_ITEMS].map((item, i) => (
+              <span key={i} style={{
+                padding: item === "·" ? "0 16px" : "0 28px",
+                fontSize: 10, fontWeight: item === "·" ? 400 : 700,
+                letterSpacing: "0.22em",
+                color: item === "·" ? "rgba(204,0,34,0.4)" : "rgba(255,255,255,0.3)",
+                whiteSpace: "nowrap",
+              }}>{item}</span>
+            ))}
+          </div>
+        </div>
+
         {/* ── HORIZONTAL SCROLL — 사업분야 ── */}
         <div id="services-section" ref={hContainerRef} style={{ position: "relative" }}>
           <div ref={hTrackRef} style={{
             display: "flex",
             width: `${SERVICES.length * 100}vw`,
-            height: "100vh",
+            height: "100dvh",
             willChange: "transform",
           }}>
             {SERVICES.map((svc, i) => (
               <div
                 key={svc.num}
                 style={{
-                  width: "100vw", height: "100vh",
+                  width: "100vw", height: "100dvh",
                   flexShrink: 0,
                   background: svc.bg,
                   position: "relative", overflow: "hidden",
@@ -491,39 +517,76 @@ export default function Home() {
             <h3 className="reveal" style={{ fontSize: "clamp(28px, 4vw, 52px)", fontWeight: 900, letterSpacing: "-0.03em", marginBottom: 72, maxWidth: 600 }}>
               한 곳에서 끝나는<br />자동차 시험 파트너
             </h3>
-            <div className="strengths-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
-              {STRENGTHS.map((item) => (
-                <div
-                  key={item.n}
-                  className="strength-card"
-                  style={{
-                    position: "relative", overflow: "hidden", padding: "52px 40px",
-                    background: "rgba(13,27,42,0.55)", border: "1px solid rgba(204,0,34,0.1)",
-                    backdropFilter: "blur(16px)", transition: "transform 0.35s, box-shadow 0.35s, border-color 0.35s, background 0.35s",
-                  }}
-                  onMouseOver={(e) => {
-                    e.currentTarget.style.transform = "translateY(-6px)";
-                    e.currentTarget.style.boxShadow = "0 24px 60px rgba(204,0,34,0.08), 0 0 0 1px rgba(204,0,34,0.2)";
-                    e.currentTarget.style.borderColor = "rgba(204,0,34,0.25)";
-                    e.currentTarget.style.background = "rgba(13,27,42,0.85)";
-                  }}
-                  onMouseOut={(e) => {
-                    e.currentTarget.style.transform = "";
-                    e.currentTarget.style.boxShadow = "";
-                    e.currentTarget.style.borderColor = "rgba(204,0,34,0.1)";
-                    e.currentTarget.style.background = "rgba(13,27,42,0.55)";
-                  }}
-                >
-                  <span style={{
-                    position: "absolute", top: -8, right: 20, fontSize: 120, fontWeight: 900, lineHeight: 1,
-                    color: "rgba(204,0,34,0.04)", letterSpacing: "-0.05em", userSelect: "none", pointerEvents: "none",
-                  }}>{item.n}</span>
-                  <p style={{ fontSize: 11, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.2em", marginBottom: 20 }}>{item.n}</p>
-                  <h4 style={{ fontSize: 22, fontWeight: 800, marginBottom: 16, lineHeight: 1.3 }}>{item.title}</h4>
-                  <div style={{ width: 32, height: 2, background: "linear-gradient(90deg, var(--accent), transparent)", marginBottom: 20 }} />
-                  <p style={{ fontSize: 14, color: "var(--text-muted)", lineHeight: 1.85 }}>{item.desc}</p>
+            {/* 비대칭 벤토 그리드 */}
+            <div className="strengths-bento" style={{ display: "grid", gridTemplateColumns: "3fr 2fr", gap: 2, background: "rgba(204,0,34,0.04)", border: "1px solid rgba(204,0,34,0.06)" }}>
+              {/* 카드 1 — 크게 */}
+              <div
+                className="strength-card"
+                style={{
+                  position: "relative", overflow: "hidden",
+                  padding: "56px 52px", background: "#06101a",
+                  transition: "background 0.3s",
+                }}
+                onMouseOver={(e) => { e.currentTarget.style.background = "#071420"; }}
+                onMouseOut={(e) => { e.currentTarget.style.background = "#06101a"; }}
+              >
+                <span style={{
+                  position: "absolute", top: -10, right: 16, fontSize: 140, fontWeight: 900, lineHeight: 1,
+                  color: "rgba(204,0,34,0.04)", letterSpacing: "-0.05em", userSelect: "none", pointerEvents: "none",
+                }}>{STRENGTHS[0].n}</span>
+                <p style={{ fontSize: 11, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.2em", marginBottom: 20 }}>{STRENGTHS[0].n}</p>
+                <h4 style={{ fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 800, marginBottom: 16, lineHeight: 1.3 }}>{STRENGTHS[0].title}</h4>
+                <div style={{ width: 32, height: 2, background: "linear-gradient(90deg, var(--accent), transparent)", marginBottom: 20 }} />
+                <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.9, maxWidth: 400 }}>{STRENGTHS[0].desc}</p>
+              </div>
+
+              {/* 카드 2 — 콤팩트 */}
+              <div
+                className="strength-card"
+                style={{
+                  position: "relative", overflow: "hidden",
+                  padding: "56px 40px", background: "#07111d",
+                  borderLeft: "1px solid rgba(255,255,255,0.04)",
+                  transition: "background 0.3s",
+                }}
+                onMouseOver={(e) => { e.currentTarget.style.background = "#081520"; }}
+                onMouseOut={(e) => { e.currentTarget.style.background = "#07111d"; }}
+              >
+                <span style={{
+                  position: "absolute", bottom: -10, right: 16, fontSize: 120, fontWeight: 900, lineHeight: 1,
+                  color: "rgba(204,0,34,0.04)", letterSpacing: "-0.05em", userSelect: "none", pointerEvents: "none",
+                }}>{STRENGTHS[1].n}</span>
+                <p style={{ fontSize: 11, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.2em", marginBottom: 20 }}>{STRENGTHS[1].n}</p>
+                <h4 style={{ fontSize: "clamp(17px, 1.8vw, 22px)", fontWeight: 800, marginBottom: 16, lineHeight: 1.3 }}>{STRENGTHS[1].title}</h4>
+                <div style={{ width: 28, height: 2, background: "linear-gradient(90deg, var(--accent), transparent)", marginBottom: 20 }} />
+                <p style={{ fontSize: 14, color: "var(--text-muted)", lineHeight: 1.85 }}>{STRENGTHS[1].desc}</p>
+              </div>
+
+              {/* 카드 3 — 가로형 전폭 */}
+              <div
+                className="strength-card strength-card-wide"
+                style={{
+                  gridColumn: "span 2",
+                  display: "flex", alignItems: "center", gap: 80,
+                  padding: "44px 52px", background: "#050e18",
+                  borderTop: "1px solid rgba(255,255,255,0.04)",
+                  transition: "background 0.3s",
+                }}
+                onMouseOver={(e) => { e.currentTarget.style.background = "#060f1a"; }}
+                onMouseOut={(e) => { e.currentTarget.style.background = "#050e18"; }}
+              >
+                <div style={{ flexShrink: 0 }}>
+                  <p style={{ fontSize: 11, color: "var(--accent)", fontWeight: 700, letterSpacing: "0.2em", marginBottom: 12 }}>{STRENGTHS[2].n}</p>
+                  <h4 style={{ fontSize: "clamp(18px, 2vw, 26px)", fontWeight: 800, lineHeight: 1.25, minWidth: 200 }}>{STRENGTHS[2].title}</h4>
                 </div>
-              ))}
+                <div style={{ width: 1, height: 56, background: "rgba(204,0,34,0.2)", flexShrink: 0 }} />
+                <p style={{ fontSize: 15, color: "var(--text-muted)", lineHeight: 1.9 }}>{STRENGTHS[2].desc}</p>
+                <div style={{ marginLeft: "auto", flexShrink: 0 }}>
+                  <div style={{ width: 48, height: 48, borderRadius: "50%", border: "1px solid rgba(204,0,34,0.3)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 9h12M9 3l6 6-6 6" stroke="var(--accent)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -634,38 +697,26 @@ export default function Home() {
       </div>
 
       <style>{`
-        @keyframes gk-gradient-shift {
-          0%,100% { background-position: 0% 50%; }
-          50%      { background-position: 100% 50%; }
-        }
-        .gk-gradient-text {
-          background: linear-gradient(90deg, #CC0022 0%, #ff3344 40%, #CC0022 80%);
-          background-size: 200% auto;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          animation: gk-gradient-shift 5s linear infinite;
-        }
-
         .gk-cta-btn {
           padding: 18px 48px; background: var(--accent); color: #fff;
           font-size: 14px; font-weight: 800; letter-spacing: 0.06em;
-          transition: opacity 0.2s;
-          animation: gk-glow 2.5s ease-in-out infinite;
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 4px 20px rgba(204,0,34,0.2);
+          transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s, opacity 0.2s;
+          will-change: transform;
         }
-        .gk-cta-btn:hover { opacity: 0.85; }
+        .gk-cta-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 10px 32px rgba(204,0,34,0.3);
+        }
+        .gk-cta-btn:active { transform: scale(0.97) translateY(0); }
 
         .gk-outline-btn {
-          padding: 18px 48px; border: 1px solid var(--border); color: var(--text-muted);
+          padding: 18px 48px; border: 1px solid rgba(255,255,255,0.14); color: rgba(255,255,255,0.6);
           font-size: 14px; font-weight: 600; letter-spacing: 0.06em;
-          transition: all 0.2s;
+          transition: all 0.25s cubic-bezier(0.16,1,0.3,1);
         }
-        .gk-outline-btn:hover { border-color: rgba(255,255,255,0.3); color: #fff; }
-
-        @keyframes gk-glow {
-          0%,100% { box-shadow: 0 0 20px rgba(204,0,34,0.4), 0 4px 24px rgba(204,0,34,0.2); }
-          50%      { box-shadow: 0 0 48px rgba(204,0,34,0.7), 0 4px 40px rgba(204,0,34,0.35); }
-        }
+        .gk-outline-btn:hover { border-color: rgba(255,255,255,0.32); color: #fff; transform: translateY(-1px); }
+        .gk-outline-btn:active { transform: scale(0.97); }
 
         @media (max-width: 768px) {
           .hero-section { padding: 80px 20px 64px !important; min-height: 100svh !important; }
@@ -675,8 +726,11 @@ export default function Home() {
           #about { padding: 64px 20px !important; }
           #about > div > div { grid-template-columns: 1fr !important; gap: 40px !important; }
 
-          .strengths-grid { grid-template-columns: 1fr !important; }
+          .strengths-bento { grid-template-columns: 1fr !important; }
           .strength-card { padding: 36px 24px !important; }
+          .strength-card-wide { flex-direction: column !important; gap: 24px !important; padding: 36px 24px !important; }
+          .strength-card-wide > div:nth-child(2) { display: none !important; }
+          .strength-card-wide > div:last-child { display: none !important; }
 
           .video-section { height: 56vw !important; min-height: 240px !important; }
           .video-section iframe { width: 100% !important; height: 100% !important; transform: none !important; top: 0 !important; left: 0 !important; }
