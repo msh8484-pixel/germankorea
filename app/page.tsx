@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import SiteFooter from "@/components/SiteFooter";
 
@@ -17,6 +18,7 @@ const SERVICES = [
     items: ["필드 내구시험", "필드 모니터링", "PEMS 시험", "친환경자동차시험", "제동시험", "조향시험", "연비성능시험"],
     video: "zRWq7hstgL4",
     side: "left",
+    href: "/services/domestic",
   },
   {
     num: "02",
@@ -26,6 +28,7 @@ const SERVICES = [
     items: ["혹한지시험", "혹서지시험", "고지시험", "성능 및 내구시험 (중국)"],
     video: "fe887fACTL8",
     side: "right",
+    href: "/services/overseas",
   },
   {
     num: "03",
@@ -35,6 +38,7 @@ const SERVICES = [
     items: ["FCA시험", "실주행 D/B 및 Monitoring", "System 특성시험", "상품성평가", "군집주행"],
     video: "xUtQ8hKQeFo",
     side: "left",
+    href: "/services/technical",
   },
   {
     num: "04",
@@ -44,6 +48,7 @@ const SERVICES = [
     items: ["시험차량 운전교육", "상품성 평가방법 교육", "차량 주행성능 시험법 교육"],
     video: "Nkz6P5daADg",
     side: "right",
+    href: "/services/training",
   },
   {
     num: "05",
@@ -53,6 +58,7 @@ const SERVICES = [
     items: ["자동차 및 부품 인증컨설팅", "자동차안전시험", "Recall 대응 컨설팅"],
     video: "8qfjxohxBNs",
     side: "left",
+    href: "/services/certification",
   },
 ];
 
@@ -267,7 +273,7 @@ export default function Home() {
                   <p style={{ fontSize: 15, color: "rgba(200,220,240,0.62)", lineHeight: 1.9, marginBottom: 28 }}>
                     {svc.desc}
                   </p>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 32 }}>
                     {svc.items.map((item) => (
                       <span key={item} style={{
                         fontSize: 12, fontWeight: 600,
@@ -280,6 +286,18 @@ export default function Home() {
                       }}>{item}</span>
                     ))}
                   </div>
+                  <Link href={svc.href} style={{
+                    display: "inline-flex", alignItems: "center", gap: 8,
+                    fontSize: 12, fontWeight: 700, letterSpacing: "0.1em",
+                    color: "var(--accent)",
+                    transition: "gap 0.2s",
+                  }}
+                    onMouseOver={(e) => { (e.currentTarget as HTMLElement).style.gap = "14px"; }}
+                    onMouseOut={(e) => { (e.currentTarget as HTMLElement).style.gap = "8px"; }}
+                  >
+                    자세히 보기
+                    <span style={{ fontSize: 16 }}>→</span>
+                  </Link>
                 </div>
               </div>
 
@@ -346,11 +364,11 @@ export default function Home() {
               Tel. 031-366-8808 &nbsp;|&nbsp; Fax. 031-366-8809
             </p>
             <p className="reveal" style={{ fontSize: 14, color: "rgba(200,218,240,0.38)", marginBottom: 56 }}>
-              info@germankorea.com
+              contact@germankorea.co.kr
             </p>
             <div className="reveal" style={{ display: "flex", gap: 14, justifyContent: "center", flexWrap: "wrap" }}>
               <a href="tel:031-366-8808" className="gk-cta-btn">031-366-8808 전화하기</a>
-              <a href="mailto:info@germankorea.com" className="gk-ghost-btn">이메일 문의</a>
+              <a href="mailto:contact@germankorea.co.kr" className="gk-ghost-btn">이메일 문의</a>
             </div>
           </div>
         </section>
